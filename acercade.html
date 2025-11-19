@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Acerca De</title>
+<link rel="stylesheet" href="css/acercade.css" />
 <link rel="stylesheet" href="css/nav.css" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -20,6 +21,26 @@
 </nav>
 
 <h1 class="titulo-principal">ACERCA DE</h1>
+
+<div class="cuadro-acerca">
+  <button class="btn-acerca">Erin</button>
+  <button class="btn-acerca">Axel</button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const botones = document.querySelectorAll(".btn-acerca");
+
+    botones.forEach(btn => {
+        btn.addEventListener("click", () => {
+            
+            botones.forEach(b => b.classList.remove("activo"));
+
+            btn.classList.add("activo");
+        });
+    });
+});
+</script>
 
 </body>
 </html>
