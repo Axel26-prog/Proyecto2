@@ -1,7 +1,12 @@
 module.exports = {
-    content: ["./*.html", "./css/**/*.css"],
+    content: ["./*.html", "./css/**/*.css", "./js/**/*.js"],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                anton: ['"Anton"', 'sans-serif'],
+                century: ['"Century Gothic"', 'sans-serif'],
+            },
+        },
     },
     plugins: [],
 };
