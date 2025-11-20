@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./css/input.css -o ./css/output.css --watch"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,10 @@
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Axel26-prog/Proyecto2/issues"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.14",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.35"
   }
-
 }
