@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "Anton";
+    src: url("../Fuentes/Anton/Anton-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+ @font-face {
+  font-family: "Century Gothic";
+  src: url("../Fuentes/century-gothic-similar-fonts/dominik/Dominik.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.cuadro-acerca {
+  background-color: #8D9983;
+  width: 800px;
+  height: 800px;    
+  padding: 20px;
+  margin: 40px auto;
+  border-radius: 10px;
+   display: flex;          
+  flex-direction: column; 
+  align-items: center;    
+  justify-content: flex-start; 
+}
+
+.form-acerca {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* espacio entre label y campo */
+  align-items: flex-start; /* alinea label y input a la izquierda dentro del 80% */
+}
+
+/* Label "Nombre:" con Century Gothic */
+.label-nombre {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Campo de texto debajo del label */
+.form-acerca input[type="text"],
+.form-acerca input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 17px;
+  border: 2px solid #465127;;  /* borde verde */
+  font-size: 16px;
+}
+
+.select-asunto {
+  width: 100%;
+  padding: 10px;
+  border-radius: 17px;
+  border: 2px solid #465127; /* mismo borde verde que los inputs */
+  font-size: 16px;
+  font-family: "Century Gothic", sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+.textarea-descripcion {
+  width: 100%;
+  height: 300px; /* más grande que los inputs */
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #465127; /* mismo borde verde */
+  font-size: 16px;
+  font-family: "Century Gothic", sans-serif;
+  resize: vertical; /* permite ajustar la altura si se quiere */
+}

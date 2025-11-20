@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Acerca De</title>
+<link rel="stylesheet" href="css/contactanos.css" />
+<link rel="stylesheet" href="css/nav.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#">INICIO</a></li>
+    <li><a href="#">PROPUESTAS</a></li>
+    <li><a href="#">ACERCA DE</a></li>
+    <li><a href="#">CONTACTANOS</a></li>
+  </ul>
+</nav>
+
+<h1 class="titulo-principal">CONTÁCTANOS</h1>
+
+<div class="cuadro-acerca">
+  <h2 class="titulo-secundario">¡ Envíanos sugerencias para mejorar la página o
+informar actividades !</h2>
+<form class="form-acerca">
+    <label for="nombre" class="label-nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+
+     <label for="correo" class="label-nombre">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" placeholder="Escribe tu correo">
+
+     <label for="asunto" class="label-nombre">Asunto:</label>
+    <select id="asunto" name="asunto" class="select-asunto">
+      <option value="" disabled selected>Selecciona un asunto</option>
+      <option value="sugerencia">Sugerencia</option>
+      <option value="consulta">Consulta</option>
+      <option value="reclamo">Reclamo</option>
+      <option value="otro">Otro</option>
+    </select>
+
+    <label for="descripcion" class="label-nombre">Descripción:</label>
+    <textarea id="descripcion" name="descripcion" class="textarea-descripcion" placeholder="Escribe tu mensaje"></textarea>
+  </form>
+</div>
+
+
+</body>
+</html>

@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+ @font-face {
+  font-family: "Century Gothic";
+  src: url("../Fuentes/century-gothic-similar-fonts/dominik/Dominik.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .titulo-principal {
   text-align: center;
   margin-top: 40px;
@@ -12,4 +19,14 @@
   font-weight: bold;
   color: #465127;
   font-family: "Anton", sans-serif;
+}
+
+.titulo-secundario {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  font-family: "Century Gothic", sans-serif;
+  text-align: center;
+  
 }
