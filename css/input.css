@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+  font-family: "Anton";
+  src: url("../Fuentes/Anton/Anton-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../Fuentes/century-gothic-similar-fonts/dominik/Dominik.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
