@@ -1,0 +1,17 @@
+[
+  {
+    "nombre": "Manatí del Caribe",
+    "imagen": "./img/Manatee.jpg",
+    "descripcion": "Los manatíes se deslizan con calma por los ríos y lagunas del Caribe costarricense, alimentándose de plantas acuáticas y manteniendo limpias las aguas. Descubre cómo estos gentiles gigantes ayudan a conservar el equilibrio de los ecosistemas costeros."
+  },
+  {
+    "nombre": "Mono Ardilla",
+    "imagen": "/img/MonoTiti.jpg",
+    "descripcion": "Los monos ardilla saltan entre las ramas del bosque lluvioso del Pacífico, conectando árboles y esparciendo semillas de frutas. Conoce cómo su presencia mantiene vivo y saludable el ecosistema del bosque."
+  },
+  {
+    "nombre": "Guacamaya Roja",
+    "imagen": "./img/GuacamayaRoja.jpg",
+    "descripcion": "Las guacamayas rojas llenan los bosques tropicales de Costa Rica con color y sonido, dispersando semillas que dan vida a nuevos árboles. Aprende cómo su protección favorece la regeneración del bosque y la biodiversidad."
+  }
+]

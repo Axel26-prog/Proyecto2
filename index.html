@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pura Vida Salvaje</title>
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/seccion2.css" />
+    <link rel="stylesheet" href="css/seccion3.css" />
+    <link rel="stylesheet" href="./css/output.css">
+
+    <style>
+      .text-shadow {
+        text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
+      }
+     
+      .text-shadow-strong {
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+      }
+      
+    </style>
+</head>
+
+<body class="text-white">
+
+<!-- NAV -->
+<nav>
+  <ul>
+    <li><a href="index.html">INICIO</a></li>
+    <li><a href="#">PROPUESTAS</a></li>
+    <li><a href="acercade.html">ACERCA DE</a></li>
+    <li><a href="contactanos.html">CONTACTANOS</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<header class="w-full flex justify-center">
+  <div
+    class="relative w-full max-w-4xl overflow-hidden rounded-b-[50px]"
+    style="
+      height:85vh;
+      border-bottom-left-radius:50px;
+      border-bottom-right-radius:50px;
+      background-image: url('./img/atanas-malamov-xGhaXZtQb1s-unsplash.jpg');
+      background-size: cover;
+      background-position: center center;
+    "
+  
+>
+    <!-- sombra  -->
+    <div style="
+        position:absolute;  
+        inset:0;
+        background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0) 60%);
+        z-index:1;
+        border-bottom-left-radius:50px;
+      border-bottom-right-radius:50px;
+    "></div>    
+
+    <!-- overlay claro encima -->
+    <div style="position:absolute; inset:0; background: rgba(0,0,0,0.10); z-index:2;"></div>
+
+    <!-- texto -->
+    <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; z-index:3; padding:1rem; color:white;">
+      <div>
+        <h1 class="text-shadow" style="font-family:'Anton'; margin:0; font-size:clamp(40px,7vw,90px);">
+          PURA VIDA SALVAJE
+        </h1>
+
+        <h2 class="text-shadow" style="font-family:'Century Gothic'; margin:.4rem 0 0; font-size:clamp(20px,2vw,22px);">
+          Wild Pura Vida
+        </h2>
+
+        <p class="text-shadow" style="font-family:'Century Gothic'; margin:.6rem 0 0; font-size:clamp(18px,1.6vw,16px);">
+          Apoyo y conservación de animales en peligro de extinción
+        </p>
+      </div>
+    </div>
+
+    <!-- flecha -->
+    <a href="#seccion2" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); z-index:4; cursor:pointer;">
+      <img src="./img/arrow-down-sign-to-navigate.png" alt="Bajar" style="width:50px; height:50px; animation:bounce 2s infinite;">
+    </a>
+</div>
+</header>
+<div style="height: 50px;"></div>
+<!-- PRÓXIMA SECCIÓN -->
+<section id="seccion2">
+  <div class="seccion2-contenedor">
+
+    <!-- Contenedor horizontal en pantallas grandes -->
+    <div class="seccion2-row">
+
+      <!-- Columna izquierda: imágenes verticales -->
+      <div class="seccion2-imagenes">
+        <img src="./img/OsoPerezoso.jpg" alt="Animal 1">
+        <img src="./img/Tucanes.jpg" alt="Animal 2">
+        <img src="./img/Volcan.jpg" alt="Animal 3">
+      </div>
+
+      <!-- Columna derecha: texto -->
+      <div class="seccion2-texto">
+        <h2>
+          POR LOS <span>ANIMALES</span> Y EL ESPÍRITU SALVAJE DE <span>COSTA RICA</span>
+        </h2>
+        <p>
+          Costa Rica alberga una de las mayores biodiversidades del planeta. Desde los bosques tropicales hasta los arrecifes de coral, cada ecosistema es hogar de especies únicas que merecen ser protegidas. Este proyecto promueve la conservación de la fauna silvestre y la educación ambiental para mantener viva la esencia natural del país.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="animales-en-peligro">
+  
+  <!-- Títulos -->
+  <h2>ANIMALES EN PELIGRO</h2>
+  <h3>Faunas en amenaza</h3>
+
+  <!-- Contenedor del carrusel -->
+  <div class="carrusel-container">
+    
+    <!-- Flechas laterales -->
+    <button class="carrusel-arrow prev">&#10094;</button>
+    <button class="carrusel-arrow next">&#10095;</button>
+
+    <!-- Contenedor de slides -->
+    <div class="carrusel-slides">
+      <!-- Slides generadas dinámicamente desde JS -->
+    </div>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
+<script src="js/animaciones.js"></script>
+<script src="js/carrusel.js"></script>
+</body>
+</html>

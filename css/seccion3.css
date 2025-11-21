@@ -1,0 +1,103 @@
+/* Sección Animales en Peligro */
+#animales-en-peligro {
+  padding: 4rem 2rem;
+  background-color: white;
+  text-align: center;
+}
+
+#animales-en-peligro h2 {
+  font-family: 'Anton', sans-serif;
+  color: #465127;
+  font-size: 5.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#animales-en-peligro h3 {
+  font-family: 'Century Gothic', sans-serif;
+  color: #465127;
+  font-size: 1.75rem;
+  margin-bottom: 5rem;
+}
+
+/* Contenedor del carrusel */
+.carrusel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: visible; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0; 
+}
+
+/* Flechas del carrusel */
+.carrusel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #465127; /* color de las flechas */
+}
+
+.carrusel-arrow.prev {
+  left: 0;
+}
+
+.carrusel-arrow.next {
+  right: 0;
+}
+/* Contenedor de slides */
+.carrusel-slides {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-slide {
+  flex: 0 0 300px; /* ancho de cada slide */
+  background-color:#8D9983;
+  border-radius:40px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition: transform 0.5s, scale 0.5s;
+  margin: 1rem;
+  transform-origin: center center;
+}
+
+.carrusel-slide img {
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.carrusel-slide .slide-content {
+  padding:1rem;
+  flex-grow:1;
+  text-align: left;
+}
+
+.carrusel-slide .slide-content h4 {
+  font-family:'Anton', sans-serif;
+  color:white;
+  margin:0 0 0.5rem 0;
+  font-size: 1.75rem;
+}
+
+.carrusel-slide .slide-content p {
+  font-family:'Century Gothic', sans-serif;
+  color:white;
+  font-size:1rem;
+  margin:0;
+}
+
+.carrusel-slide.active {
+  transform: scale(1.2);
+  z-index:1;
+  transform-origin: center center;
+}
