@@ -27,18 +27,42 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const slides = document.querySelectorAll('.carrusel-slide');
 
- function updateCarousel() {
+ function getCurrentTranslateX(el) {
+  const st = window.getComputedStyle(el);
+  const tr = st.transform || st.webkitTransform;
+  if (tr && tr !== 'none') {
+    // matrix(a, b, c, d, tx, ty) or matrix3d(...)
+    const match = tr.match(/matrix.*\((.+)\)/);
+    if (match) {
+      const values = match[1].split(',').map(v => parseFloat(v.trim()));
+      // tx está en el índice 4 para matrix(a,b,c,d,tx,ty)
+      return values.length === 6 ? values[4] : 0;
+    }
+  }
+  return 0;
+}
+
+function updateCarousel() {
   slides.forEach((slide, index) => {
-    slide.classList.remove('active');
-    if(index === currentIndex) slide.classList.add('active');
+    slide.classList.toggle('active', index === currentIndex);
   });
 
-  const slideWidth = slides[0].offsetWidth + 32; 
-  const containerWidth = slidesContainer.offsetWidth;
- 
-  const offset = (containerWidth / 2) - (slideWidth / 2) - currentIndex * slideWidth;
-  
-  slidesContainer.style.transform = `translateX(${offset}px)`;
+  // rects absolutos en la ventana
+  const containerRect = slidesContainer.parentElement.getBoundingClientRect(); // .carrusel-container
+  const slideRect = slides[currentIndex].getBoundingClientRect();
+
+  // centro del contenedor y centro de la slide
+  const containerCenter = containerRect.left + containerRect.width / 2;
+  const slideCenter = slideRect.left + slideRect.width / 2;
+
+  // delta necesario (px) para alinear el centro de la slide con el centro del contenedor
+  const delta = containerCenter - slideCenter;
+
+  // obtener el translateX actual y sumarle el ajuste
+  const currentTranslate = getCurrentTranslateX(slidesContainer);
+  const newTranslate = currentTranslate + delta;
+
+  slidesContainer.style.transform = `translateX(${newTranslate}px)`;
 }
 
   // Flechas
@@ -58,3 +82,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     updateCarousel();
   }, 5000); // cada 5 segundos
 });
+

@@ -21,14 +21,13 @@
 
 /* Contenedor del carrusel */
 .carrusel-container {
+  display: flex;
+  justify-content: center;
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: visible; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 0; 
+  overflow: hidden; /* importante */
+  padding: 3rem 0;
 }
 
 /* Flechas del carrusel */

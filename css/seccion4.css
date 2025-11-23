@@ -1,0 +1,73 @@
+/* Sección que queda fija */
+.sticky-section {
+  position: relative;
+  height: 200vh; /* Se duplica para permitir scroll */
+}
+
+/* Contenido fijo al scroll */
+.sticky-content {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url('/img/Bosque.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Vistas (se alternan con JS) */
+.view {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.view-1 {
+  opacity: 1;
+}
+
+/* Estilos internos */
+.titulo {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.linea {
+  width: 80px;
+  height: 4px;
+  background: white;
+  margin: 15px 0;
+}
+
+.sub {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.tarjetas {
+  display: flex;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}

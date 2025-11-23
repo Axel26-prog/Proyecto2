@@ -13,5 +13,10 @@
     "nombre": "Guacamaya Roja",
     "imagen": "./img/GuacamayaRoja.jpg",
     "descripcion": "Las guacamayas rojas llenan los bosques tropicales de Costa Rica con color y sonido, dispersando semillas que dan vida a nuevos árboles. Aprende cómo su protección favorece la regeneración del bosque y la biodiversidad."
+  },
+  {
+    "nombre": "Tortuga Baula",
+    "imagen": "./img/TortugaBaula.jpg",
+    "descripcion": "La tortuga baula, la especie de tortuga marina más grande del mundo, llega a las playas de Costa Rica para anidar. Su conservación es vital para la salud de los océanos, pues controla poblaciones de medusas y mantiene el equilibrio marino."
   }
 ]
