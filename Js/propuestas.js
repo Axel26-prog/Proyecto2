@@ -1,23 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.addEventListener("scroll", () => {
-    const section = document.querySelector(".sticky-section");
-    const view1 = document.querySelector(".view-1");
-    const view2 = document.querySelector(".view-2");
+  const section = document.querySelector(".sticky-section");
+  const view1 = document.querySelector(".view-1");
+  const view2 = document.querySelector(".view-2");
+  const overlay = document.querySelector(".overlay-dark");
 
-    if (!section) return;
+  if (!section) return;
 
-    const rect = section.getBoundingClientRect();
-    const scrollAmount = Math.abs(rect.top);  // cuánto hemos bajado dentro de la sección
-    const switchPoint = window.innerHeight * 0.5; // cuando llegamos a la mitad del scroll
+  const sectionTop = section.offsetTop;
+  const sectionHeight = section.offsetHeight;
 
-    if (scrollAmount > switchPoint) {
-      // Mostrar vista 2
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const progress = scrollY - sectionTop;
+
+    // El punto donde cambia la vista
+    const switchPoint = sectionHeight * 0.65;
+
+    if (progress > switchPoint) {
+    
       view1.style.opacity = "0";
       view2.style.opacity = "1";
+      overlay.style.opacity = "0.6";
     } else {
-      // Mostrar vista 1
+      // Vista 1 normal
       view1.style.opacity = "1";
       view2.style.opacity = "0";
+      overlay.style.opacity = "0";
     }
   });
 });

@@ -1,4 +1,4 @@
-/* Sección Animales en Peligro */
+
 #animales-en-peligro {
   padding: 4rem 2rem;
   background-color: white;
@@ -19,18 +19,18 @@
   margin-bottom: 5rem;
 }
 
-/* Contenedor del carrusel */
+
 .carrusel-container {
   display: flex;
   justify-content: center;
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden; /* importante */
+  overflow: hidden;
   padding: 3rem 0;
 }
 
-/* Flechas del carrusel */
+
 .carrusel-arrow {
   position: absolute;
   top: 50%;
@@ -40,7 +40,7 @@
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  color: #465127; /* color de las flechas */
+  color: #465127; 
 }
 
 .carrusel-arrow.prev {
@@ -50,7 +50,7 @@
 .carrusel-arrow.next {
   right: 0;
 }
-/* Contenedor de slides */
+
 .carrusel-slides {
   display: flex;
   gap: 2rem;
@@ -58,7 +58,7 @@
 }
 
 .carrusel-slide {
-  flex: 0 0 300px; /* ancho de cada slide */
+  flex: 0 0 300px; 
   background-color:#8D9983;
   border-radius:40px;
   overflow:hidden;

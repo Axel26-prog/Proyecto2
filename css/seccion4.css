@@ -1,10 +1,25 @@
-/* Sección que queda fija */
-.sticky-section {
-  position: relative;
-  height: 200vh; /* Se duplica para permitir scroll */
+ @font-face {
+  font-family: "Anton";
+  src: url("../Fuentes/Anton/Anton-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-/* Contenido fijo al scroll */
+ @font-face {
+  font-family: "Century Gothic";
+  src: url("../Fuentes/century-gothic-similar-fonts/dominik/Dominik.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+.sticky-section {
+  position: relative;
+  height: 200vh; 
+}
+
 .sticky-content {
   position: sticky;
   top: 0;
@@ -18,7 +33,16 @@
   align-items: center;
 }
 
-/* Vistas (se alternan con JS) */
+.overlay-dark {
+  position: absolute;
+  inset: 0;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+
 .view {
   position: absolute;
   inset: 0;
@@ -28,16 +52,21 @@
   align-items: center;
   color: white;
   opacity: 0;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.25s ease-out; 
 }
-
 .view-1 {
   opacity: 1;
 }
 
-/* Estilos internos */
+.view-2 {
+  opacity: 0;
+}
+
+
+
 .titulo {
-  font-size: 4rem;
+  font-family: 'Anton', sans-serif;
+  font-size: 6rem;
   font-weight: 800;
 }
 
@@ -66,8 +95,24 @@
   text-align: center;
 }
 
+.card h3 {
+  font-family: 'Anton', sans-serif;
+  color: white;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.card p {
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 1rem;
+  color: white;
+  max-width: 200px;
+}
+
 .card img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
 }
+
+

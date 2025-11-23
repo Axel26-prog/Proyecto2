@@ -28,7 +28,7 @@
 <nav>
   <ul>
     <li><a href="index.html">INICIO</a></li>
-    <li><a href="#">PROPUESTAS</a></li>
+    <li><a href="index.html#propuestas">PROPUESTAS</a></li>
     <li><a href="acercade.html">ACERCA DE</a></li>
     <li><a href="contactanos.html">CONTACTANOS</a></li>
   </ul>
@@ -58,7 +58,7 @@
       border-bottom-right-radius:50px;
     "></div>    
 
-    <!-- overlay claro encima -->
+    <!-- overlay claro -->
     <div style="position:absolute; inset:0; background: rgba(0,0,0,0.10); z-index:2;"></div>
 
     <!-- texto -->
@@ -128,20 +128,23 @@
 
     <!-- Contenedor de slides -->
     <div class="carrusel-slides">
-      <!-- Slides generadas dinámicamente desde JS -->
+      <!-- Slides generadas desde JS -->
     </div>
   </div>
 </section>
 
 <section id="propuestas" class="sticky-section">
+
   <!-- Contenedor interno que cambia mientras se hace scroll -->
   <div class="sticky-content" id="stickyContent">
+
+      <!-- Overlay oscuro -->
+      <div class="overlay-dark"></div>
 
       <!-- Vista 1 -->
       <div class="view view-1">
         <h2 class="titulo">PROPUESTAS</h2>
         <div class="linea"></div>
-        <p class="sub">Aplicar la transición</p>
       </div>
 
       <!-- Vista 2 -->
@@ -149,20 +152,13 @@
         <h2 class="titulo">PROPUESTAS</h2>
         <div class="linea"></div>
 
-        <div class="tarjetas">
-          <div class="card">
-            <img src="/img/Voluntarios.jpeg">
-            <h3>DONACIÓN</h3>
-            <p>Descripción</p>
-          </div>
-
-          <div class="card">
-            <img src="./img/actividades.png">
-            <h3>ACTIVIDADES VOLUNTARIAS</h3>
-            <p>Descripción</p>
-          </div>
-        </div>
-      </div>
+    <div class="tarjetas">
+  <a href="actividades.html" class="card" style="text-decoration:none; color:inherit;">
+    <img src="/img/Voluntarios.jpeg">
+    <h3>ACTIVIDADES VOLUNTARIAS</h3>
+    <p>Descripción</p>
+  </a>
+</div>
 
   </div>
 </section>
@@ -170,6 +166,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
 <script src="js/animaciones.js"></script>
 <script src="js/carrusel.js"></script>
-<scrip src="js/propuestas.js"></script>
+<script src="js/propuestas.js"></script>
 </body>
 </html>

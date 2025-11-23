@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   const st = window.getComputedStyle(el);
   const tr = st.transform || st.webkitTransform;
   if (tr && tr !== 'none') {
-    // matrix(a, b, c, d, tx, ty) or matrix3d(...)
+    
     const match = tr.match(/matrix.*\((.+)\)/);
     if (match) {
       const values = match[1].split(',').map(v => parseFloat(v.trim()));
-      // tx está en el índice 4 para matrix(a,b,c,d,tx,ty)
+      
       return values.length === 6 ? values[4] : 0;
     }
   }
@@ -47,18 +47,18 @@ function updateCarousel() {
     slide.classList.toggle('active', index === currentIndex);
   });
 
-  // rects absolutos en la ventana
-  const containerRect = slidesContainer.parentElement.getBoundingClientRect(); // .carrusel-container
+
+  const containerRect = slidesContainer.parentElement.getBoundingClientRect(); 
   const slideRect = slides[currentIndex].getBoundingClientRect();
 
-  // centro del contenedor y centro de la slide
+ 
   const containerCenter = containerRect.left + containerRect.width / 2;
   const slideCenter = slideRect.left + slideRect.width / 2;
 
-  // delta necesario (px) para alinear el centro de la slide con el centro del contenedor
+  
   const delta = containerCenter - slideCenter;
 
-  // obtener el translateX actual y sumarle el ajuste
+
   const currentTranslate = getCurrentTranslateX(slidesContainer);
   const newTranslate = currentTranslate + delta;
 
@@ -76,7 +76,7 @@ function updateCarousel() {
     updateCarousel();
   });
 
-  // Rotación automática
+
   setInterval(() => {
     currentIndex = (currentIndex + 1) % animales.length;
     updateCarousel();
