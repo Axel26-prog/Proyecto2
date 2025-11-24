@@ -28,7 +28,7 @@
             Seleccione una provincia:
         </label>
 
-        <select class="w-full p-2 rounded mb-6">
+        <select id="selectProvincia" class="w-full p-2 rounded mb-6">
             <option value="">Seleccione...</option>
         </select>
 
@@ -51,5 +51,26 @@
     </div>
 
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+    const selectProvincia = document.getElementById("selectProvincia");
 
+    try {
+        // Cargar JSON
+        const response = await fetch("data/provincias.json");
+        const provincias = await response.json();
+
+        // Llenar select
+        provincias.forEach(prov => {
+            const option = document.createElement("option");
+            option.value = prov;
+            option.textContent = prov;
+            selectProvincia.appendChild(option);
+        });
+
+    } catch (error) {
+        console.error("Error cargando provincias:", error);
+    }
+});
+</script>
 </html>

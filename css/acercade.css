@@ -41,3 +41,28 @@
     color: #465127;
     border: 2px solid #465127;
 }
+
+.info-box {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 15px;
+    display: none; 
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+/* Imagen */
+.info-box img {
+    max-width: 180px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* Botón activo */
+.btn-acerca.activo {
+    background-color: #465127;
+    color: white;
+}

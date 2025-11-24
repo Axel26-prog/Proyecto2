@@ -7,6 +7,28 @@
 <link rel="stylesheet" href="css/acercade.css" />
 <link rel="stylesheet" href="css/nav.css" />
 <link rel="stylesheet" href="css/style.css" />
+
+<style>
+  .info-area {
+    margin-top: 20px;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+  }
+
+  .info-area img {
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .btn-acerca.activo {
+    background-color: #465127;
+    color: white;
+  }
+</style>
+
 </head>
 
 <body>
@@ -22,23 +44,55 @@
 
 <h1 class="titulo-principal">ACERCA DE</h1>
 
+<!-- TODO QUEDA AQUÍ DENTRO -->
 <div class="cuadro-acerca">
-  <button class="btn-acerca">Erin</button>
-  <button class="btn-acerca">Axel</button>
+
+  <!-- Tus botones -->
+  <button class="btn-acerca" data-id="erin">Erin</button>
+  <button class="btn-acerca" data-id="axel">Axel</button>
+
+  <!-- Aquí aparecerá la info -->
+  <div id="info-area" class="info-area"></div>
+
 </div>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const botones = document.querySelectorAll(".btn-acerca");
+    const infoArea = document.getElementById("info-area");
+
+    // Información
+    const data = {
+        erin: `
+            <img src="./img/fotoErin.jpg" alt="Erin">
+            <h2>Erin Stella Huang Lin</h2>
+            <p>Datos</p>
+            <p>Cédula: 119100455</p>
+            <p>Correo: stella.huang0702@gmail.com</p>
+        `,
+        axel: `
+            <img src="./img/fotoaxel.jpg" alt="Axel">
+            <h2>Axel Orozco Guzman</h2>
+            <p>Soy estudiante de Ingeniería del Software en la UTN. Me gusta el backend y también el frontend.</p>
+            <p>Cédula: 208580807</p>
+            <p>Correo: axelguzman996@gmail.com</p>
+        `
+    };
 
     botones.forEach(btn => {
         btn.addEventListener("click", () => {
-            
-            botones.forEach(b => b.classList.remove("activo"));
 
+            botones.forEach(b => b.classList.remove("activo"));
             btn.classList.add("activo");
+
+            const id = btn.dataset.id;
+
+            infoArea.innerHTML = data[id];
         });
     });
+
+    // Mostrar Erin por defecto
+    document.querySelector(".btn-acerca[data-id='erin']").click();
 });
 </script>
 
