@@ -1,0 +1,16 @@
+{
+  "erin": {
+    "nombre": "Erin Stella Huang Lin",
+    "descripcion": "Datos",
+    "cedula": "119100455",
+    "correo": "stella.huang0702@gmail.com",
+    "foto": "/img/fotoErin.jpg"
+  },
+  "axel": {
+    "nombre": "Axel Orozco Guzman",
+    "descripcion": "Soy estudiante de Ingeniería del Software en la UTN. Me gusta el backend, pero también el frontend.",
+    "cedula": "208580807",
+    "correo": "axelguzman996@gmail.com",
+    "foto": "/img/fotoaxel.jpg"
+  }
+}

@@ -1,0 +1,198 @@
+ @font-face {
+  font-family: "Anton";
+  src: url("../Fuentes/Anton/Anton-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+ @font-face {
+  font-family: "Century Gothic";
+  src: url("../Fuentes/century-gothic-similar-fonts/dominik/Dominik.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+  --verde-claro: #8D9983;
+  --verde-oscuro: #465127;
+  --blanco: #ffffff;
+}
+
+.seccion-proyectos{
+  margin: 0 auto;
+  color: var(--verde-oscuro);
+  font-family: "Century Gothic", sans-serif;
+}
+
+.seccion-proyectos h2.proyectos-titulo{
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.proyectos-titulo::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TITULO PRINCIPAL */
+.proyectos-titulo{
+  font-family: 'Anton', sans-serif;
+  color: var(--verde-claro);
+  font-size: 5.2rem;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  padding-top: 1rem;
+}
+
+.proyectos-titulo::after{
+  content: "";
+  display: block;
+  height: 6px;
+  width: 3.2rem;
+  background: var(--verde-claro);
+  margin-top: 0.4rem;
+  border-radius: 3px;
+}
+
+.proyectos-sub{
+  font-family: "Century Gothic", sans-serif;
+  color: var(--verde-claro);
+  margin-top: 0.6rem;
+  font-size:1.56rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* PANEL PRINCIPAL */
+.proyectos-panel{
+  padding-left: 1.5rem;
+  margin-top: 1.5rem;
+  background:   #C7CDC3;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  min-height: 350px;
+  overflow: visible;
+}
+
+/* COLUMNAS */
+.col-izq, .col-centro, .col-der{
+  display: flex;
+  align-items: center;
+}
+
+.col-izq{
+  flex: 1.2;
+  padding-left: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+/* TEXTO IZQUIERDA */
+.small-label{
+  font-size: 1rem;
+  color: rgba(70,81,39,0.85);
+}
+
+.proyecto-nombre{
+  font-family: 'Anton', sans-serif;
+  color: var(--verde-oscuro);
+  font-size: 2rem;
+  margin: 0;
+}
+
+.proyecto-descripcion{
+  font-family: "Century Gothic", sans-serif;
+  color: var(--verde-oscuro);
+  margin: 0;
+  font-size: 1.15rem;
+  max-width: 420px;
+}
+
+/* LOGO CENTRO */
+.col-centro{
+  flex: 1;                /* Toma espacio proporcional */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-proyecto{
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  background: var(--blanco);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* DERECHA: CATEGORÍAS */
+.col-der{
+  flex: 0 0 170px;
+}
+
+.categorias{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 160px;
+  align-items: center;
+}
+
+.categoria{
+  background: var(--verde-oscuro);
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  width: 90%;
+  transition: 0.25s ease;
+   position: relative;
+   transform-origin: center;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+.categoria:not(.selected){
+  transform: scale(1);
+  opacity: 0.85;
+}
+
+.categoria.selected{
+  background: var(--verde-oscuro);
+  transform: scale(1.25);
+  font-size: 1rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.col-categorias{
+  flex: 0 0 45%;         
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.7rem;
+  height: 100%;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+  .proyectos-panel{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .col-izq{ align-items: center; padding: 0; }
+  .col-der{ width: 100%; }
+}

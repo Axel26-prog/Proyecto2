@@ -1,33 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Acerca De</title>
-<link rel="stylesheet" href="css/acercade.css" />
-<link rel="stylesheet" href="css/nav.css" />
-<link rel="stylesheet" href="css/style.css" />
 
-<style>
-  .info-area {
-    margin-top: 20px;
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-  }
-
-  .info-area img {
-    width: 150px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-
-  .btn-acerca.activo {
-    background-color: #465127;
-    color: white;
-  }
-</style>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/acercade.css"> 
+<link rel="stylesheet" href="css/footer.css">
 
 </head>
 
@@ -36,65 +18,45 @@
 <nav>
   <ul>
     <li><a href="index.html">INICIO</a></li>
-    <li><a href="#">PROPUESTAS</a></li>
-    <li><a href="#">ACERCA DE</a></li>
+    <li><a href="index.html#propuestas">PROPUESTAS</a></li>
+    <li><a href="acercade.html">ACERCA DE</a></li>
     <li><a href="contactanos.html">CONTACTANOS</a></li>
   </ul>
 </nav>
 
 <h1 class="titulo-principal">ACERCA DE</h1>
 
-<!-- TODO QUEDA AQUÍ DENTRO -->
+<!-- Área principal -->
 <div class="cuadro-acerca">
-
-  <!-- Tus botones -->
+  <div class="buttons-col">
+  <!-- Botones -->
   <button class="btn-acerca" data-id="erin">Erin</button>
   <button class="btn-acerca" data-id="axel">Axel</button>
-
-  <!-- Aquí aparecerá la info -->
-  <div id="info-area" class="info-area"></div>
+    </div>
+  <!-- Contenido dinámico -->
+  <div id="info-area"></div>
 
 </div>
+<footer class="footer">
+  <div class="footer-contenedor">
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const botones = document.querySelectorAll(".btn-acerca");
-    const infoArea = document.getElementById("info-area");
+    <!-- IZQUIERDA: DATOS -->
+    <div class="footer-datos">
+      <h4 class="footer-titulo">Contacto</h4>
+      <p>Tel: +506 8888-8888</p>
+      <p>Correo: info@proyectosfauna.cr</p>
+      <p>San José, Costa Rica</p>
+    </div>
 
-    // Información
-    const data = {
-        erin: `
-            <img src="./img/fotoErin.jpg" alt="Erin">
-            <h2>Erin Stella Huang Lin</h2>
-            <p>Datos</p>
-            <p>Cédula: 119100455</p>
-            <p>Correo: stella.huang0702@gmail.com</p>
-        `,
-        axel: `
-            <img src="./img/fotoaxel.jpg" alt="Axel">
-            <h2>Axel Orozco Guzman</h2>
-            <p>Soy estudiante de Ingeniería del Software en la UTN. Me gusta el backend y también el frontend.</p>
-            <p>Cédula: 208580807</p>
-            <p>Correo: axelguzman996@gmail.com</p>
-        `
-    };
+    <!-- DERECHA: LOGO -->
+    <div class="footer-logo">
+      <img src="img/Logo.png" alt="Logo" />
+    </div>
 
-    botones.forEach(btn => {
-        btn.addEventListener("click", () => {
+  </div>
+</footer>
 
-            botones.forEach(b => b.classList.remove("activo"));
-            btn.classList.add("activo");
-
-            const id = btn.dataset.id;
-
-            infoArea.innerHTML = data[id];
-        });
-    });
-
-    // Mostrar Erin por defecto
-    document.querySelector(".btn-acerca[data-id='erin']").click();
-});
-</script>
+<script src="js/acercade.js"></script>
 
 </body>
 </html>

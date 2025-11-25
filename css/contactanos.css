@@ -1,3 +1,4 @@
+/* --- FUENTES --- */
 @font-face {
     font-family: "Anton";
     src: url("../Fuentes/Anton/Anton-Regular.ttf") format("truetype");
@@ -5,70 +6,118 @@
     font-style: normal;
 }
 
- @font-face {
-  font-family: "Century Gothic";
-  src: url("../Fuentes/century-gothic-similar-fonts/dominik/Dominik.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+@font-face {
+    font-family: "Century Gothic";
+    src: url("../Fuentes/century-gothic-similar-fonts/dominik/Dominik.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
+/* --- CONTENEDOR PRINCIPAL --- */
+.contacto-wrapper {
+    display: flex;
+    justify-content: space-between; /* formulario a la izquierda, mapa a la derecha */
+    align-items: flex-start;
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    flex-wrap: wrap; /* permite apilar en pantallas pequeñas */
+}
+
+/* --- FORMULARIO --- */
 .cuadro-acerca {
-  background-color: #8D9983;
-  width: 800px;
-  height: 800px;    
-  padding: 20px;
-  margin: 40px auto;
-  border-radius: 10px;
-   display: flex;          
-  flex-direction: column; 
-  align-items: center;    
-  justify-content: flex-start; 
+    flex: 2; /* ocupa proporcionalmente espacio, mínimo 500px */
+    max-width: 700px;
+    background-color: #8D9983;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* labels alineados a la izquierda */
+    justify-content: flex-start;
 }
 
+/* FORMULARIO INTERNO */
 .form-acerca {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* espacio entre label y campo */
-  align-items: flex-start; /* alinea label y input a la izquierda dentro del 80% */
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* espacio entre label y campo */
+    align-items: flex-start;
 }
 
-/* Label "Nombre:" con Century Gothic */
+/* Label con Century Gothic */
 .label-nombre {
-  font-family: "Century Gothic", sans-serif;
-  font-size: 18px;
-  color: white;
-  font-weight: bold;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
 }
 
-/* Campo de texto debajo del label */
+/* Campos de texto */
 .form-acerca input[type="text"],
 .form-acerca input[type="email"] {
-  width: 100%;
-  padding: 10px;
-  border-radius: 17px;
-  border: 2px solid #465127;;  /* borde verde */
-  font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 17px;
+    border: 2px solid #465127;
+    font-size: 16px;
 }
 
+/* Select asunto */
 .select-asunto {
-  width: 100%;
-  padding: 10px;
-  border-radius: 17px;
-  border: 2px solid #465127; /* mismo borde verde que los inputs */
-  font-size: 16px;
-  font-family: "Century Gothic", sans-serif;
-  background-color: white;
-  color: #333;
+    width: 100%;
+    padding: 10px;
+    border-radius: 17px;
+    border: 2px solid #465127;
+    font-size: 16px;
+    font-family: "Century Gothic", sans-serif;
+    background-color: white;
+    color: #333;
 }
 
+/* Textarea descripción */
 .textarea-descripcion {
-  width: 100%;
-  height: 300px; /* más grande que los inputs */
-  padding: 10px;
-  border-radius: 5px;
-  border: 2px solid #465127; /* mismo borde verde */
-  font-size: 16px;
-  font-family: "Century Gothic", sans-serif;
-  resize: vertical; /* permite ajustar la altura si se quiere */
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #465127;
+    font-size: 16px;
+    font-family: "Century Gothic", sans-serif;
+    resize: vertical;
+}
+
+/* --- MAPA --- */
+.mapa-contenedor {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+.mapa-contenedor iframe {
+    width: 100%;
+    height:600px;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .contacto-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuadro-acerca, .mapa-contenedor {
+        flex: 1 1 100%;
+    }
+
+    .mapa-contenedor iframe {
+        height: 350px;
+    }
 }

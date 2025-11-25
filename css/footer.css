@@ -1,0 +1,56 @@
+footer.footer {
+  background: var(--blanco);
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  border-top: 2px solid rgba(0,0,0,0.08);
+  font-family: "Century Gothic", sans-serif;
+  color: var(--verde-oscuro);
+}
+
+.footer-contenedor {
+  width: 100%;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* TEXTO IZQUIERDO */
+.footer-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.footer-titulo {
+  margin: 0 0 0.5rem;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.4rem;
+  color: var(--verde-oscuro) !important;
+}
+
+/* LOGO */
+.footer-logo img {
+  height: 250px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer,
+.footer p,
+.footer h4 {
+  color: var(--verde-oscuro) !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .footer-contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    margin-top: 1rem;
+  }
+}
