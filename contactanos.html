@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="css/nav.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/footer.css" />
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -45,6 +46,8 @@
 
         <label for="descripcion" class="label-nombre">Descripción:</label>
         <textarea id="descripcion" name="descripcion" class="textarea-descripcion" placeholder="Escribe tu mensaje"></textarea>
+        <div class="g-recaptcha" data-sitekey="6LeYLxosAAAAAKqPfjutMiimFrZlvpM--e6Nk-FB"></div>
+        <button type="button" id="btn-enviar" class="btn-enviar">ENVIAR</button>
     </form>
   </div>
 
@@ -78,6 +81,18 @@
   </div>
 </footer>
 
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="cerrar">&times;</span>
+    <h2>Datos enviados:</h2>
 
+    <p><strong>Nombre:</strong> <span id="m-nombre"></span></p>
+    <p><strong>Correo:</strong> <span id="m-correo"></span></p>
+    <p><strong>Asunto:</strong> <span id="m-asunto"></span></p>
+    <p><strong>Descripción:</strong></p>
+    <p id="m-descripcion"></p>
+  </div>
+</div>
+<script src="js/modalcontacto.js"></script>
 </body>
 </html>
