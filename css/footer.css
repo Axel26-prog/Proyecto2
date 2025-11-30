@@ -54,3 +54,11 @@ footer.footer {
     margin-top: 1rem;
   }
 }
+
+.footer .footer-titulo {
+  color: #3D4F2F !important;   
+}
+
+.footer-datos {
+  color: #3D4F2F;   
+}

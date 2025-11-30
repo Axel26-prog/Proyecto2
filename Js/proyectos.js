@@ -1,18 +1,18 @@
 const PROYECTOS = {
   1: {
-    title: "Reserva Monteverde",
-    desc: "Protección de bosques, monitoreo de especies y corredores biológicos.",
-    logo: `<svg width="100" height="100"><rect width="100" height="100" rx="12" fill="#ffffff"/><text x="50" y="57" text-anchor="middle" font-family="Anton" font-size="36" fill="#465127">MV</text></svg>`
+    title: "Jaguar Rescue Center",
+    desc: "Reforestación de áreas degradadas, creación de corredores biológicos y programas educativos sobre protección de fauna y ecosistemas.",
+    logo: `<img src="./img/JRCv.jpg" class="logo-img" alt="Jaguar Rescue Center">`
   },
   2: {
-    title: "Centro de Rescate La Marina",
-    desc: "Rehabilitación de animales víctimas de tráfico y cacería.",
-    logo: `<svg width="100" height="100"><rect width="100" height="100" rx="12" fill="#ffffff"/><text x="50" y="57" text-anchor="middle" font-family="Anton" font-size="32" fill="#465127">RM</text></svg>`
+    title: "Rescate Wildlife Rescue Center (Zoo Ave)",
+    desc: "Rescate, tratamiento y liberación de animales heridos o confiscados; recuperación física y comportamental para su retorno al hábitat.",
+    logo: `<img src="./img/ZOAVE.jpg" class="logo-img" alt="Rescate Wildlife Rescue Center">`
   },
   3: {
-    title: "Eco Educación CR",
-    desc: "Programas educativos para conciencia ambiental en escuelas.",
-    logo: `<svg width="100" height="100"><rect width="100" height="100" rx="12" fill="#ffffff"/><text x="50" y="57" text-anchor="middle" font-family="Anton" font-size="32" fill="#465127">ED</text></svg>`
+    title: "NATUWA Wildlife Sanctuary",
+    desc: "Charlas, talleres y recorridos educativos dirigidos a escuelas y comunidades para promover el respeto por la fauna silvestre, la importancia de los ecosistemas y la protección de especies en peligro.",
+    logo: `<img src="./img/NATUWA.png" class="logo-img" alt="NATUWA Wildlife Sanctuary">`
   }
 };
 
@@ -46,4 +46,10 @@ function ordenarCategorias(id) {
       c.style.order = c.dataset.id < id ? "0" : "2";
     }
   });
+
 }
+
+window.addEventListener("load", () => {
+    const catConservacion = document.querySelector('.categoria[data-id="1"]');
+    if (catConservacion) catConservacion.click();
+  });

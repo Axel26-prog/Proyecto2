@@ -125,8 +125,8 @@
 }
 
 .logo-proyecto{
-  width: 140px;
-  height: 140px;
+  width: 220px;
+  height: 220px;
   border-radius: 12px;
   background: var(--blanco);
   display: grid;
@@ -155,12 +155,13 @@
   font-weight: bold;
   cursor: pointer;
   font-size: 1.1rem;
-  width: 90%;
+  width: 170%;
   transition: 0.25s ease;
    position: relative;
    transform-origin: center;
     left: 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    text-align: center;
 }
 
 
@@ -185,6 +186,12 @@
   height: 100%;
 }
 
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
 
 /* RESPONSIVE */
 @media (max-width: 900px){

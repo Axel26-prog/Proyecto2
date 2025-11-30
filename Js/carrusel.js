@@ -1,85 +1,119 @@
-document.addEventListener('DOMContentLoaded', async () => {
-  const slidesContainer = document.querySelector('.carrusel-slides');
-  const prevBtn = document.querySelector('.carrusel-arrow.prev');
-  const nextBtn = document.querySelector('.carrusel-arrow.next');
+// js/carrusel.js
+document.addEventListener("DOMContentLoaded", async () => {
+    const slidesContainer = document.querySelector(".carrusel-slides");
+    const prevBtn = document.querySelector(".carrusel-arrow.prev");
+    const nextBtn = document.querySelector(".carrusel-arrow.next");
+    const wrapper = document.querySelector(".carrusel-container");
 
-  let animales = [];
-  let currentIndex = 0;
+    if (!slidesContainer || !prevBtn || !nextBtn || !wrapper) return;
 
-  // Cargar JSON
-  const response = await fetch('data/animales.json');
-  animales = await response.json();
+    let animales = [];
+    let slides = [];
+    let currentIndex = 0;
 
-  // Crear slides
-  animales.forEach((animal, index) => {
-    const slide = document.createElement('div');
-    slide.classList.add('carrusel-slide');
-    if(index === 0) slide.classList.add('active');
-    slide.innerHTML = `
-      <img src="${animal.imagen}" alt="${animal.nombre}">
-      <div class="slide-content">
-        <h4>${animal.nombre}</h4>
-        <p>${animal.descripcion}</p>
-      </div>
-    `;
-    slidesContainer.appendChild(slide);
-  });
-
-  const slides = document.querySelectorAll('.carrusel-slide');
-
- function getCurrentTranslateX(el) {
-  const st = window.getComputedStyle(el);
-  const tr = st.transform || st.webkitTransform;
-  if (tr && tr !== 'none') {
-    
-    const match = tr.match(/matrix.*\((.+)\)/);
-    if (match) {
-      const values = match[1].split(',').map(v => parseFloat(v.trim()));
-      
-      return values.length === 6 ? values[4] : 0;
+    // =========================
+    //   Cargar JSON original
+    // =========================
+    try {
+        const resp = await fetch("data/animales.json");
+        animales = await resp.json();
+    } catch (e) {
+        console.error("Error cargando animales.json", e);
+        return;
     }
-  }
-  return 0;
-}
 
-function updateCarousel() {
-  slides.forEach((slide, index) => {
-    slide.classList.toggle('active', index === currentIndex);
-  });
+    // =========================
+    //   Crear tarjeta
+    // =========================
+    const crearTarjeta = (animal) => {
+        const d = document.createElement("div");
+        d.classList.add("carrusel-slide");
+        d.innerHTML = `
+            <img src="${animal.imagen}">
+            <div class="slide-content">
+                <h4>${animal.nombre}</h4>
+                <p>${animal.descripcion}</p>
+            </div>
+        `;
+        return d;
+    };
 
+    // =========================
+    //   Repetir secuencia N veces
+    // =========================
+    const REPETICIONES = 1000; // repetciones
 
-  const containerRect = slidesContainer.parentElement.getBoundingClientRect(); 
-  const slideRect = slides[currentIndex].getBoundingClientRect();
+    for (let r = 0; r < REPETICIONES; r++) {
+        animales.forEach(a => slidesContainer.appendChild(crearTarjeta(a)));
+    }
 
- 
-  const containerCenter = containerRect.left + containerRect.width / 2;
-  const slideCenter = slideRect.left + slideRect.width / 2;
+    slides = Array.from(document.querySelectorAll(".carrusel-slide"));
 
-  
-  const delta = containerCenter - slideCenter;
+    // =========================
+    //   Medidas 
+    // =========================
+    let step = 0;
+    let baseOffset = 0;
 
+    function calcularMedidas() {
+        const r0 = slides[0].getBoundingClientRect();
+        const r1 = slides[1].getBoundingClientRect();
 
-  const currentTranslate = getCurrentTranslateX(slidesContainer);
-  const newTranslate = currentTranslate + delta;
+        step = r1.left - r0.left;  // distancia horizontal
+        baseOffset = (wrapper.clientWidth - r0.width) / 2;
+    }
 
-  slidesContainer.style.transform = `translateX(${newTranslate}px)`;
-}
+    function aplicarTransform(animar = true) {
+        slides.forEach((s, i) => {
+            s.classList.toggle("active", i === currentIndex);
+        });
 
-  // Flechas
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + animales.length) % animales.length;
-    updateCarousel();
-  });
+        slidesContainer.style.transition = animar ? "transform 0.35s ease" : "none";
 
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % animales.length;
-    updateCarousel();
-  });
+        const x = baseOffset - step * currentIndex;
+        slidesContainer.style.transform = `translateX(${x}px)`;
+    }
 
+    // =========================
+    //   Mover derecha/izquierda
+    // =========================
+    function siguiente() {
+        currentIndex++;
+        if (currentIndex >= slides.length) currentIndex = 0; // reiniciar
+        aplicarTransform(true);
+    }
 
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % animales.length;
-    updateCarousel();
-  }, 5000); // cada 5 segundos
+    function anterior() {
+        currentIndex--;
+        if (currentIndex < 0) currentIndex = slides.length - 1;
+        aplicarTransform(true);
+    }
+
+    // =========================
+    //   Clicks
+    // =========================
+    nextBtn.addEventListener("click", siguiente);
+    prevBtn.addEventListener("click", anterior);
+
+    // =========================
+    //   Auto-slide
+    // =========================
+    let auto = setInterval(siguiente, 5000);
+
+    wrapper.addEventListener("mouseenter", () => clearInterval(auto));
+    wrapper.addEventListener("mouseleave", () => {
+        auto = setInterval(siguiente, 5000);
+    });
+
+    // =========================
+    //   Inicializar
+    // =========================
+    calcularMedidas();
+    aplicarTransform(false);
+
+    window.addEventListener("resize", () => {
+        calcularMedidas();
+        aplicarTransform(false);
+    });
 });
 

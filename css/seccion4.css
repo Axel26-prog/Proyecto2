@@ -44,6 +44,15 @@
 
 
 .view {
+  /*position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.25s ease-out; */
   position: absolute;
   inset: 0;
   display: flex;
@@ -52,14 +61,17 @@
   align-items: center;
   color: white;
   opacity: 0;
-  transition: opacity 0.25s ease-out; 
+  /* quitamos transition para que el scroll controle todo */
+  will-change: transform, opacity;
 }
 .view-1 {
   opacity: 1;
+  transform: translateY(0); /* Estado inicial: título centrado */
 }
 
 .view-2 {
   opacity: 0;
+  transform: translateY(80px); /* Estado inicial: segunda vista un poco más abajo y oculta */
 }
 
 
@@ -110,9 +122,16 @@
 }
 
 .card img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 280px;        /* más ancho */
+  height: 180px;       /* más alto */
+  border-radius: 15px; /* ya NO es círculo */
+  object-fit: cover;   /* recorte limpio */
 }
+
+.sticky-section {
+  position: relative;
+  height: 240vh; 
+}
+
 
 

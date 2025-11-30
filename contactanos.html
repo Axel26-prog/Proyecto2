@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contactanos</title>
-<link rel="stylesheet" href="css/contactanos.css" />
-<link rel="stylesheet" href="css/nav.css" />
-<link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" href="css/footer.css" />
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contactanos</title>
+  <link rel="stylesheet" href="css/contactanos.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/output.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
 
-<nav>
-  <ul>
-    <li><a href="index.html">INICIO</a></li>
-    <li><a href="#">PROPUESTAS</a></li>
-    <li><a href="acercade.html">ACERCA DE</a></li>
-    <li><a href="#">CONTACTANOS</a></li>
-  </ul>
-</nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">INICIO</a></li>
+      <li><a href="index.html#propuestas">PROPUESTAS</a></li>
+      <li><a href="acercade.html">ACERCA DE</a></li>
+      <li><a href="#">CONTACTANOS</a></li>
+    </ul>
+  </nav>
 
-<h1 class="titulo-principal">CONTÁCTANOS</h1>
+  <h1 class="titulo-principal">CONTÁCTANOS</h1>
 
-<div class="contacto-wrapper">
+  <div class="contacto-wrapper">
 
-  <div class="cuadro-acerca">
-    <h2 class="titulo-secundario">¡ Envíanos sugerencias para mejorar la página o informar actividades !</h2>
-    <form class="form-acerca">
+    <div class="cuadro-acerca">
+      <h2 class="titulo-secundario">¡ Envíanos sugerencias para mejorar la página o informar actividades !</h2>
+      <form class="form-acerca">
         <label for="nombre" class="label-nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
 
@@ -45,54 +47,55 @@
         </select>
 
         <label for="descripcion" class="label-nombre">Descripción:</label>
-        <textarea id="descripcion" name="descripcion" class="textarea-descripcion" placeholder="Escribe tu mensaje"></textarea>
+        <textarea id="descripcion" name="descripcion" class="textarea-descripcion"
+          placeholder="Escribe tu mensaje"></textarea>
         <div class="g-recaptcha" data-sitekey="6LeYLxosAAAAAKqPfjutMiimFrZlvpM--e6Nk-FB"></div>
         <button type="button" id="btn-enviar" class="btn-enviar">ENVIAR</button>
-    </form>
-  </div>
+      </form>
+    </div>
 
-  <div class="mapa-contenedor">
-      <iframe 
+    <div class="mapa-contenedor">
+      <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.0367514516714!2d-84.090724!3d9.928069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOeKCrTU2JzU5LjAiTiA4NMKwMDUnMjcuMCJX!5e0!3m2!1ses!2scr!4v1712899900000"
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
+        style="border:0;" allowfullscreen="" loading="lazy">
       </iframe>
-  </div>
-
-</div>
-
-<footer class="footer">
-  <div class="footer-contenedor">
-
-    <!-- IZQUIERDA: DATOS -->
-    <div class="footer-datos">
-      <h4 class="footer-titulo">Contacto</h4>
-      <p>Tel: +506 8888-8888</p>
-      <p>Correo: info@proyectosfauna.cr</p>
-      <p>San José, Costa Rica</p>
-    </div>
-
-    <!-- DERECHA: LOGO -->
-    <div class="footer-logo">
-      <img src="img/Logo.png" alt="Logo" />
     </div>
 
   </div>
-</footer>
 
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="cerrar">&times;</span>
-    <h2>Datos enviados:</h2>
+  <footer class="footer">
+    <div class="footer-contenedor">
 
-    <p><strong>Nombre:</strong> <span id="m-nombre"></span></p>
-    <p><strong>Correo:</strong> <span id="m-correo"></span></p>
-    <p><strong>Asunto:</strong> <span id="m-asunto"></span></p>
-    <p><strong>Descripción:</strong></p>
-    <p id="m-descripcion"></p>
+      <!-- IZQUIERDA: DATOS -->
+      <div class="footer-datos">
+        <h4 class="footer-titulo">Contacto</h4>
+        <p class="footer-dato">Tel: +506 8888-8888</p>
+        <p class="footer-dato">Correo: info@proyectosfauna.cr</p>
+        <p class="footer-dato">San José, Costa Rica</p>
+
+      </div>
+
+      <!-- DERECHA: LOGO -->
+      <div class="footer-logo">
+        <img src="img/Logo.png" alt="Logo" />
+      </div>
+
+    </div>
+  </footer>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="cerrar">&times;</span>
+      <h2>Datos enviados:</h2>
+
+      <p><strong>Nombre:</strong> <span id="m-nombre"></span></p>
+      <p><strong>Correo:</strong> <span id="m-correo"></span></p>
+      <p><strong>Asunto:</strong> <span id="m-asunto"></span></p>
+      <p><strong>Descripción:</strong></p>
+      <p id="m-descripcion"></p>
+    </div>
   </div>
-</div>
-<script src="js/modalcontacto.js"></script>
+  <script src="js/modalcontacto.js"></script>
 </body>
+
 </html>
