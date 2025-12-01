@@ -176,16 +176,57 @@ select {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 900px) {
-    .contacto-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
+  .contacto-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 95%;
+    margin: 20px auto;
+  }
 
-    .cuadro-acerca, .mapa-contenedor {
-        flex: 1 1 100%;
-    }
+  .cuadro-acerca,
+  .mapa-contenedor {
+    max-width: 100%;
+  }
 
-    .mapa-contenedor iframe {
-        height: 350px;
-    }
+  .cuadro-acerca {
+    padding: 15px;
+  }
+
+  .form-acerca {
+    width: 100%;
+  }
+
+  .textarea-descripcion {
+    height: 200px; /* más bajito en cel */
+  }
+
+  .mapa-contenedor iframe {
+    height: 320px;
+  }
+
+  .btn-enviar {
+    width: 100%;      /* botón ancho completo en móvil */
+    font-size: 16px;
+  }
+}
+
+/* ==========================
+   MÓVIL MUY PEQUEÑO
+   ========================== */
+@media (max-width: 480px) {
+  .label-nombre {
+    font-size: 16px;
+  }
+
+  .form-acerca input[type="text"],
+  .form-acerca input[type="email"],
+  .select-asunto,
+  .textarea-descripcion {
+    font-size: 14px;
+  }
+
+  .contacto-wrapper {
+    margin-top: 15px;
+  }
 }

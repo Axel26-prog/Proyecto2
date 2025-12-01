@@ -1,4 +1,4 @@
- @font-face {
+ /* @font-face {
   font-family: "Anton";
   src: url("../Fuentes/Anton/Anton-Regular.ttf") format("truetype");
   font-weight: normal;
@@ -44,15 +44,7 @@
 
 
 .view {
-  /*position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  opacity: 0;
-  transition: opacity 0.25s ease-out; */
+
   position: absolute;
   inset: 0;
   display: flex;
@@ -61,17 +53,17 @@
   align-items: center;
   color: white;
   opacity: 0;
-  /* quitamos transition para que el scroll controle todo */
+ 
   will-change: transform, opacity;
 }
 .view-1 {
   opacity: 1;
-  transform: translateY(0); /* Estado inicial: título centrado */
+  transform: translateY(0); 
 }
 
 .view-2 {
   opacity: 0;
-  transform: translateY(80px); /* Estado inicial: segunda vista un poco más abajo y oculta */
+  transform: translateY(80px); 
 }
 
 
@@ -122,10 +114,10 @@
 }
 
 .card img {
-  width: 280px;        /* más ancho */
-  height: 180px;       /* más alto */
-  border-radius: 15px; /* ya NO es círculo */
-  object-fit: cover;   /* recorte limpio */
+  width: 280px;        
+  height: 180px;       
+  border-radius: 15px; 
+  object-fit: cover;   
 }
 
 .sticky-section {
@@ -153,4 +145,287 @@
 .btn-inscribete:hover {
   transform: scale(1.08);
   box-shadow: 0 6px 18px rgba(255,255,255,0.25);
+} */
+
+@font-face {
+  font-family: "Anton";
+  src: url("../Fuentes/Anton/Anton-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../Fuentes/century-gothic-similar-fonts/dominik/Dominik.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* =======================================
+   CONTENEDOR PRINCIPAL (SECCIÓN 4)
+   - Mobile first: SIN sticky por defecto
+   - En pantallas grandes se activa sticky
+   ======================================= */
+.sticky-section {
+  position: relative;
+  min-height: 120vh;
+}
+
+.sticky-content {
+  position: relative; /* sticky solo en desktop */
+  width: 100%;
+  min-height: 120vh;
+  background-image: url("/img/Bosque.jpg"); /* ajusta a ../img/Bosque.jpg si hace falta */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Capa oscura que se intensifica con el scroll vía JS */
+.overlay-dark {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.7)
+  );
+  opacity: 0.8;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+/* =======================================
+   VISTAS (view-1 y view-2)
+   ======================================= */
+.view {
+  position: absolute;
+  inset: 0;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: transform, opacity;
+  z-index: 2;
+}
+
+/* Estado base: vista 1 visible, vista 2 oculta.
+   GSAP/JS se encarga de interpolar estos valores. */
+.view-1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.view-2 {
+  opacity: 0;
+  transform: translateY(80px);
+}
+
+/* =======================================
+   TIPOGRAFÍA
+   ======================================= */
+.titulo {
+  font-family: "Anton", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  /* clamp(min, preferida, max) => responsivo */
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+}
+
+.linea {
+  width: 70px;
+  height: 4px;
+  background: white;
+  margin: 16px 0;
+}
+
+.sub {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 1.05rem;
+  opacity: 0.85;
+}
+
+/* =======================================
+   TARJETAS / CONTENIDO DE LA VISTA 2
+   ======================================= */
+.tarjetas {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 1.25rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+}
+
+.card img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-family: "Anton", sans-serif;
+  color: white;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.card p {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 0.95rem;
+  color: white;
+  max-width: 95%;
+  margin-top: 0.4rem;
+}
+
+/* Botón de inscripción */
+.btn-inscribete {
+  margin-top: 1.1rem;
+  padding: 10px 26px;
+  background-color: white;
+  color: #465127;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 1rem;
+  border-radius: 8px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  height: 46px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn-inscribete:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+  background: #f3f3f3;
+}
+
+/* =======================================
+   RESPONSIVO - TABLET / MÓVIL
+   ======================================= */
+@media (max-width: 768px) {
+  .sticky-section {
+    min-height: 110vh;
+  }
+
+  .sticky-content {
+    min-height: 110vh;
+  }
+
+  .view {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .titulo {
+    font-size: clamp(2.2rem, 7vw, 3rem);
+  }
+
+  .linea {
+    width: 50px;
+  }
+
+  .sub {
+    font-size: 0.95rem;
+  }
+
+  .tarjetas {
+    max-width: 360px;
+  }
+
+  .card img {
+    max-width: 260px;
+  }
+
+  .card h3 {
+    font-size: 1.25rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Móvil muy pequeño */
+@media (max-width: 480px) {
+  .sticky-section {
+    min-height: 100vh;
+  }
+
+  .sticky-content {
+    min-height: 100vh;
+  }
+
+  .titulo {
+    font-size: 2rem;
+  }
+
+  .card img {
+    max-width: 230px;
+  }
+}
+
+/* =======================================
+   DESKTOP / PANTALLAS GRANDES
+   - Se activa sticky y layout más ancho
+   ======================================= */
+@media (min-width: 900px) {
+  .sticky-section {
+    height: 220vh; /* suficiente para que la animación tenga recorrido */
+  }
+
+  .sticky-content {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+
+  .view {
+    padding: 3rem 2.5rem;
+  }
+
+  .tarjetas {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 900px;
+    gap: 3rem;
+  }
+
+  .card {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .card p {
+    max-width: 260px;
+  }
+}
+

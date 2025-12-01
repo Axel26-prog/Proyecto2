@@ -3,18 +3,33 @@
   src: url("../Fuentes/Anton/Anton-Regular.ttf") format("truetype");
 }
 
+/* TÍTULO (sobrescribe si style.css ya tenía algo) */
+.titulo-principal {
+  font-family: "Anton", sans-serif;
+  text-align: center;
+  color: #465127;
+  margin-top: 90px;
+  letter-spacing: 0.25em;
+  font-size: clamp(2.4rem, 7vw, 4.5rem);
+}
+
+/* CONTENEDOR PRINCIPAL */
 .cuadro-acerca {
   background-color: #8D9983;
-  width: 800px;
+  max-width: 900px;
+  /* antes width: 800px fijo */
+  width: 100%;
   padding: 25px;
-  margin: 40px auto;
+  margin: 30px auto 40px;
   border-radius: 12px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 20px;
+  box-sizing: border-box;
 }
 
+/* BOTONES PERSONAS */
 .btn-acerca {
   width: 200px;
   padding: 10px 20px;
@@ -38,43 +53,123 @@
 .buttons-col {
   display: flex;
   flex-direction: column;
-  width: 200px;   /* Columna fija */
+  width: 200px;
+  /* en desktop está bien */
 }
 
+/* CONTENIDO DINÁMICO */
 #info-area {
-    flex: 1;
-    width: 90%;
-    max-width: 600px;
-    margin-top: 10px;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-  }
+  flex: 1;
+  width: 90%;
+  max-width: 600px;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
 
-  #info-area img {
-    width: 180px;
-    border-radius: 12px;
-    margin-bottom: 12px;
-  }
+#info-area.visible {
+  opacity: 1;
+}
 
- .cuadro-acerca #info-area h2 {
+#info-area img {
+  width: 180px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.cuadro-acerca #info-area h2 {
   font-family: "Anton", sans-serif;
   color: white !important;
   font-size: 40px;
 }
 
-  #info-area p {
-    font-size: 20px;
-    color: #FFFFFF;
-    font-family: "Century Gothic", sans-serif;
-    line-height: 1.4;
-  }
-
- #info-area {
-    opacity: 0;
-    transition: opacity 0.4s ease;
+#info-area p {
+  font-size: 20px;
+  color: #FFFFFF;
+  font-family: "Century Gothic", sans-serif;
+  line-height: 1.4;
 }
 
-#info-area.visible {
-    opacity: 1;
+/* ==========================
+   RESPONSIVE
+   ========================== */
+@media (max-width: 768px) {
+
+  .cuadro-acerca {
+    flex-direction: column;
+    /* botones arriba, info abajo */
+    align-items: center;
+    padding: 20px 16px;
+  }
+
+  .buttons-col {
+    flex-direction: row;
+    /* botones en fila */
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .btn-acerca {
+    width: 100%;
+    /* cada botón ocupa el ancho disponible */
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  #info-area {
+     flex: 1;
+  width: 90%;
+  max-width: 600px;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+
+  /* NUEVO: usamos flex para centrar contenido */
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centra horizontalmente todo (incluida la imagen) */
+  justify-content: flex-start;
+  }
+
+  #info-area img {
+    width: 180px;
+  border-radius: 12px;
+  margin: 0 auto 12px auto;  /* por si alguna vez se quita el flex */
+  display: block;
+  }
+
+  .cuadro-acerca #info-area h2 {
+    font-size: 28px;
+  }
+
+  #info-area p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .cuadro-acerca {
+    margin: 20px auto 30px;
+    padding-inline: 14px;
+  }
+
+  .buttons-col {
+    flex-direction: column;
+    /* en cel chiquito vuelven a columna */
+    align-items: stretch;
+  }
+
+  .btn-acerca {
+    font-size: 16px;
+  }
+
+  #info-area img {
+    width: 130px;
+  }
 }

@@ -45,3 +45,57 @@ nav ul li a:hover {
   color: white;             
   background-color: #8D9983;   
 }
+
+/* 
+BOTÓN HAMBURGUESA
+*/
+.menu-btn {
+  display: none;
+  font-size: 30px;
+  color: #465127;
+  cursor: pointer;
+}
+
+/* 
+ VERSIÓN DE ESCRITORIO (normal)
+*/
+nav ul {
+  display: flex;
+}
+
+/* 
+   3) RESPONSIVO — MÓVILES
+*/
+@media (max-width: 768px) {
+
+  /* Mostrar el botón hamburguesa */
+  .menu-btn {
+    display: block;
+  }
+
+  /* Convertir el menú en vertical y ocultarlo */
+  nav ul {
+    position: absolute;
+    top: 70px;            /* debajo del navbar */
+    right: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 0;
+
+    display: none;        /* se activa con JS */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  /* Mostrar menú cuando se active */
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}

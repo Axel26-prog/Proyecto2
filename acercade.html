@@ -2,62 +2,73 @@
 <html lang="es">
 
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Acerca De</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acerca De</title>
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/nav.css">
-<link rel="stylesheet" href="css/acercade.css"> 
-<link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="css/output.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/acercade.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/output.css">
 
 </head>
 
 <body>
 
-<nav>
-  <ul>
-    <li><a href="index.html">INICIO</a></li>
-    <li><a href="index.html#propuestas">PROPUESTAS</a></li>
-    <li><a href="acercade.html">ACERCA DE</a></li>
-    <li><a href="contactanos.html">CONTACTANOS</a></li>
-  </ul>
-</nav>
-<br><br><br>
-<h1 class="titulo-principal">ACERCA DE</h1>
+  <nav>
+    <div class="menu-btn" id="menuBtn">☰</div>
+    <ul id="navMenu">
+      <li><a href="index.html">INICIO</a></li>
+      <li><a href="index.html#propuestas">PROPUESTAS</a></li>
+      <li><a href="acercade.html">ACERCA DE</a></li>
+      <li><a href="contactanos.html">CONTACTANOS</a></li>
+    </ul>
+  </nav>
+  <br><br><br>
+  <h1 class="titulo-principal">ACERCA DE</h1>
 
-<!-- Área principal -->
-<div class="cuadro-acerca">
-  <div class="buttons-col">
-  <!-- Botones -->
-  <button class="btn-acerca" data-id="erin">Erin</button>
-  <button class="btn-acerca" data-id="axel">Axel</button>
+  <!-- Área principal -->
+  <div class="cuadro-acerca">
+    <div class="buttons-col">
+      <!-- Botones -->
+      <button class="btn-acerca" data-id="erin">Erin</button>
+      <button class="btn-acerca" data-id="axel">Axel</button>
     </div>
-  <!-- Contenido dinámico -->
-  <div id="info-area"></div>
-
-</div>
-<footer class="footer">
-  <div class="footer-contenedor">
-
-    <!-- IZQUIERDA: DATOS -->
-    <div class="footer-datos">
-      <h4 class="footer-titulo">Contacto</h4>
-      <p>Tel: +506 8888-8888</p>
-      <p>Correo: info@proyectosfauna.cr</p>
-      <p>San José, Costa Rica</p>
-    </div>
-
-    <!-- DERECHA: LOGO -->
-    <div class="footer-logo">
-      <img src="img/Logo.png" alt="Logo" />
-    </div>
+    <!-- Contenido dinámico -->
+    <div id="info-area"></div>
 
   </div>
-</footer>
+  <footer class="footer">
+    <div class="footer-contenedor">
 
-<script src="js/acercade.js"></script>
+      <!-- IZQUIERDA: DATOS -->
+      <div class="footer-datos">
+        <h4 class="footer-titulo">Contacto</h4>
+        <p>Tel: +506 8888-8888</p>
+        <p>Correo: info@proyectosfauna.cr</p>
+        <p>San José, Costa Rica</p>
+      </div>
+
+      <!-- DERECHA: LOGO -->
+      <div class="footer-logo">
+        <img src="img/Logo.png" alt="Logo" />
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/acercade.js"></script>
+  <script>
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("navMenu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("show");
+    });
+  </script>
+
 
 </body>
+
 </html>

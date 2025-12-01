@@ -62,3 +62,36 @@ footer.footer {
 .footer-datos {
   color: #3D4F2F;   
 }
+
+@media (max-width: 700px) {
+  .footer-contenedor {
+    flex-direction: column;
+    text-align: center;
+    margin-left: 0;
+    padding: 0 1rem;
+  }
+
+  .footer-logo img {
+    height: 160px; /* más pequeño en móvil */
+    margin-top: 1rem;
+  }
+
+  .footer-titulo {
+    font-size: 1.2rem;
+  }
+
+  .footer-datos {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo img {
+    height: 130px;
+  }
+
+  .footer-datos {
+    gap: 0.2rem;
+  }
+}
+

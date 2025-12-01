@@ -104,3 +104,46 @@
   object-fit: cover; /* el video se comporta como imagen */
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+
+/* Desktop / normal */
+.seccion2-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  .seccion2-row {
+    flex-direction: column;
+  }
+
+  .seccion2-video,
+  .seccion2-texto {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .seccion2-texto h2 {
+    font-size: 2rem;        /* antes 3.5rem */
+    line-height: 1.2;
+  }
+
+  .seccion2-texto p {
+    font-size: 1rem;        /* antes 2rem */
+    line-height: 1.5;
+  }
+}
+
+/* MÓVIL MUY PEQUEÑO */
+@media (max-width: 480px) {
+
+  .seccion2-texto h2 {
+    font-size: 1.7rem;
+  }
+
+  .seccion2-texto p {
+    font-size: 0.95rem;
+  }
+}
