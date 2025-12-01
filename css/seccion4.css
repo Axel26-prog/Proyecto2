@@ -134,4 +134,23 @@
 }
 
 
+.btn-inscribete {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: white;
+  color: #465127;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: inline-block; 
+  width: auto;
+  height: 50px;           
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
+.btn-inscribete:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(255,255,255,0.25);
+}

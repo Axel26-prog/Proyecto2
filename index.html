@@ -159,6 +159,9 @@
     <img src="/img/rescate.webp">
     <h3>ACTIVIDADES VOLUNTARIAS</h3>
     <p>“Únete a actividades reales de conservación y apoyo a la fauna silvestre.”</p>
+    
+    <a href="actividades.html" class="btn-inscribete">Inscríbete →</a>
+
   </a>
 </div>
 
@@ -171,9 +174,9 @@
   <br>
   <br>
 <section class="seccion-proyectos" aria-label="Proyectos">
-  <h2 class="proyectos-titulo">PROYECTOS</h2>
+  <h2 class="proyectos-titulo">INSTITUCIONES</h2>
   <p class="proyectos-sub">
-    Algunos Proyectos Nacionales que Protegen Nuestra Fauna
+    Algunos Instituciones Nacionales que Protegen Nuestra Fauna
   </p>
 
   <div class="proyectos-panel">
@@ -237,5 +240,44 @@
 <script src="js/carrusel.js"></script>
 <script src="js/propuestas.js"></script>
 <script src="js/proyectos.js"></script> 
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // ¿La URL tiene #propuestas?
+  if (window.location.hash !== "#propuestas") return;
+
+  // ¿Desde dónde venimos?
+  let vieneDeMismaPagina = false;
+
+  if (document.referrer) {
+    try {
+      const ref = new URL(document.referrer);
+      // mismo path => venía de la misma página (ej: recarga)
+      vieneDeMismaPagina = (ref.pathname === window.location.pathname);
+    } catch (e) {
+      // si algo falla, asumimos que NO viene de otra página
+      vieneDeMismaPagina = true;
+    }
+  }
+
+  // Si venimos de la misma página (recarga / scroll interno) NO hacemos nada
+  if (vieneDeMismaPagina) return;
+
+  // Si venimos de otra página (acercade.html, contactanos.html, etc.),
+  // corregimos el scroll después de que cargue todo
+  setTimeout(() => {
+    const target = document.querySelector("#propuestas");
+    if (!target) return;
+
+    const offset = target.getBoundingClientRect().top + window.scrollY - 50;
+
+    window.scrollTo({
+      top: offset,
+      behavior: "smooth"
+    });
+  }, 600); // puedes ajustar 500–800 ms si hace falta
+});
+</script>
+
 </body>
 </html>
