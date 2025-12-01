@@ -7,6 +7,8 @@ document.getElementById("btn-enviar").addEventListener("click", function () {
 
     const captcha = grecaptcha.getResponse(); // respuesta del captcha
 
+    
+
     if (!nombre || !correo || !asunto || !descripcion) {
         alert("Por favor complete todos los campos.");
         return;
@@ -26,7 +28,20 @@ document.getElementById("btn-enviar").addEventListener("click", function () {
     document.getElementById("modal").style.display = "block";
 });
 
+function limpiarFormulario() {
+    document.getElementById("nombre").value = "";
+    document.getElementById("correo").value = "";
+    document.getElementById("asunto").selectedIndex = 0;   // vuelve a "Selecciona un asunto"
+    document.getElementById("descripcion").value = "";
+
+    // resetear el captcha (si está cargado)
+    if (typeof grecaptcha !== "undefined") {
+        grecaptcha.reset();
+    }
+}
+
 // Cerrar modal
 document.querySelector(".cerrar").addEventListener("click", function () {
     document.getElementById("modal").style.display = "none";
+    limpiarFormulario();
 });

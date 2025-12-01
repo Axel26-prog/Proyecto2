@@ -23,6 +23,18 @@ select {
     font-size: 16px;
 }
 
+/* Color del texto dentro de los select */
+#selectProvincia,
+#selectActividad {
+    color: #465127 !important;
+}
+
+/* Color de todas las opciones del dropdown */
+#selectProvincia option,
+#selectActividad option {
+    color: #465127;
+}
+
 /* Contenedor general de la tarjeta */
 .card-actividad {
     margin-top: 1rem;

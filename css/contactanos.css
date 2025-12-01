@@ -128,6 +128,7 @@
   width: 80%;
   max-width: 500px;
   font-family: "Century Gothic";
+  color: #465127;
 }
 
 .cerrar {
@@ -163,6 +164,14 @@
 .btn-enviar:active {
   transform: scale(0.97);
   box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    color: #465127 !important;
+    font-family: "Century Gothic";
 }
 
 /* --- RESPONSIVE --- */
