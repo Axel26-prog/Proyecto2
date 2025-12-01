@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const errorFormulario = document.getElementById("errorFormulario");
 
     function lanzarConfeti() {
-        const duration = 1 * 1000;
+        const duration = 1 * 1200;
         const end = Date.now() + duration;
 
         (function frame() {
