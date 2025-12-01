@@ -2,219 +2,189 @@
 @font-face {
     font-family: "Anton";
     src: url("../Fuentes/Anton/Anton-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
 }
-
 @font-face {
     font-family: "Century Gothic";
     src: url("../Fuentes/century-gothic-similar-fonts/dominik/Dominik.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
 }
 
 /* --- CONTENEDOR PRINCIPAL --- */
 .contacto-wrapper {
     display: flex;
-    justify-content: space-between; /* formulario a la izquierda, mapa a la derecha */
+    justify-content: space-between;
     align-items: flex-start;
     gap: 2rem;
     width: 90%;
     max-width: 1200px;
     margin: 40px auto;
-    flex-wrap: wrap; /* permite apilar en pantallas pequeñas */
+    flex-wrap: wrap;
 }
 
 /* --- FORMULARIO --- */
 .cuadro-acerca {
-    flex: 2; /* ocupa proporcionalmente espacio, mínimo 500px */
+    flex: 2;
+    min-width: 300px;
     max-width: 700px;
     background-color: #8D9983;
     padding: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* labels alineados a la izquierda */
-    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 /* FORMULARIO INTERNO */
 .form-acerca {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px; /* espacio entre label y campo */
-    align-items: flex-start;
+    gap: 10px;
 }
 
-/* Label con Century Gothic */
+/* Label */
 .label-nombre {
-    font-family: "Century Gothic", sans-serif;
+    font-family: "Century Gothic";
     font-size: 18px;
     color: white;
     font-weight: bold;
 }
 
-/* Campos de texto */
+/* Inputs */
 .form-acerca input[type="text"],
-.form-acerca input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    border-radius: 17px;
-    border: 2px solid #465127;
-    font-size: 16px;
-    font-family: "Century Gothic", sans-serif; 
-}
-
-/* Select asunto */
-.select-asunto {
-    width: 100%;
-    padding: 10px;
-    border-radius: 17px;
-    border: 2px solid #465127;
-    font-size: 16px;
-    font-family: "Century Gothic", sans-serif;
-    background-color: white;
-    color: #333;
-}
-
-/* Textarea descripción */
+.form-acerca input[type="email"],
+.select-asunto,
 .textarea-descripcion {
     width: 100%;
-    height: 300px;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px;
+    border-radius: 17px;
     border: 2px solid #465127;
     font-size: 16px;
-    font-family: "Century Gothic", sans-serif;
+    font-family: "Century Gothic";
+    color: #465127;
+}
+
+/* Textarea */
+.textarea-descripcion {
+    height: 300px;
     resize: vertical;
+    border-radius: 10px;
 }
 
 /* --- MAPA --- */
 .mapa-contenedor {
     flex: 1;
+    min-width: 260px;
+    max-width: 500px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    max-width: 500px;
 }
 
 .mapa-contenedor iframe {
     width: 100%;
-    height:600px;
+    height: 600px;
     border-radius: 10px;
     border: 0;
     box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
 
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
-}
-
-.modal-content {
-  background-color: white;
-  margin: auto;
-  padding: 20px;
-  border-radius: 15px;
-  width: 80%;
-  max-width: 500px;
-  font-family: "Century Gothic";
-  color: #465127;
-}
-
-.cerrar {
-  float: right;
-  font-size: 24px;
-  cursor: pointer;
-}
-
+/* --- BOTÓN --- */
 .btn-enviar {
-  background-color: #465127;       /* verde oscuro */
+  background-color: #465127;
   color: white;
-  font-family: "Century Gothic", sans-serif;
+  font-family: "Century Gothic";
   font-size: 18px;
   font-weight: bold;
   padding: 12px 25px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  width: 48%;                    /* ocupa todo el ancho del formulario */
+  width: 48%;
   margin-top: 15px;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Efecto al pasar el mouse */
 .btn-enviar:hover {
-  background-color: #5e6b3a;      /* un verde más claro */
-  transform: translateY(-2px);    /* leve elevación */
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  background-color: #5e6b3a;
+  transform: translateY(-2px);
 }
 
-/* Efecto al presionar */
 .btn-enviar:active {
   transform: scale(0.97);
-  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
-input[type="text"],
-input[type="email"],
-textarea,
-select {
-    color: #465127 !important;
-    font-family: "Century Gothic";
+/* Modal */ .modal { display: none;
+     position: fixed;
+      z-index: 9999;
+       padding-top: 100px; 
+       left: 0;
+        top: 0;
+         width: 100%;
+          height: 100%;
+           background-color: rgba(0,0,0,0.6);
+         } 
+         .modal-content 
+         { background-color: white; 
+            margin: auto;
+             padding: 20px;
+              border-radius: 15px;
+               width: 80%;
+                max-width: 500px;
+                 font-family: "Century Gothic"; 
+                 color: #465127;
+                 } 
+                 .cerrar
+                  { float: right;
+                     font-size: 24px;
+                      cursor: pointer;
+                     }
+
+/* ==========================
+   TABLET / LAPTOP PEQUEÑA
+   ========================== */
+@media (max-width: 1100px) {
+  .contacto-wrapper {
+      gap: 1.5rem;
+  }
+  .mapa-contenedor iframe {
+      height: 520px;
+  }
 }
 
-/* --- RESPONSIVE --- */
+/* ==========================
+   TABLET / MOBILE GRANDE
+   ========================== */
 @media (max-width: 900px) {
   .contacto-wrapper {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
     width: 95%;
-    margin: 20px auto;
+    gap: 1.5rem;
   }
 
   .cuadro-acerca,
   .mapa-contenedor {
     max-width: 100%;
-  }
-
-  .cuadro-acerca {
-    padding: 15px;
-  }
-
-  .form-acerca {
     width: 100%;
   }
 
   .textarea-descripcion {
-    height: 200px; /* más bajito en cel */
+    height: 220px;
   }
 
   .mapa-contenedor iframe {
-    height: 320px;
+    height: 400px;
   }
 
   .btn-enviar {
-    width: 100%;      /* botón ancho completo en móvil */
-    font-size: 16px;
+    width: 100%;
   }
 }
 
 /* ==========================
-   MÓVIL MUY PEQUEÑO
+   MOBILE NORMAL
    ========================== */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .label-nombre {
     font-size: 16px;
   }
@@ -223,10 +193,28 @@ select {
   .form-acerca input[type="email"],
   .select-asunto,
   .textarea-descripcion {
-    font-size: 14px;
+    font-size: 15px;
+    padding: 10px;
   }
 
+  .mapa-contenedor iframe {
+    height: 350px;
+  }
+}
+
+/* ==========================
+   MÓVIL MUY PEQUEÑO
+   ========================== */
+@media (max-width: 480px) {
   .contacto-wrapper {
     margin-top: 15px;
+  }
+
+  .textarea-descripcion {
+    height: 180px;
+  }
+
+  .mapa-contenedor iframe {
+    height: 300px;
   }
 }
