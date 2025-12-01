@@ -1,144 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pura Vida Salvaje</title>
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/seccion2.css" />
-    <link rel="stylesheet" href="css/seccion3.css" />
-    <link rel="stylesheet" href="css/seccion4.css" />
-    <link rel="stylesheet" href="css/seccion5.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="./css/output.css">
 
-    <style>
-      .text-shadow {
-        text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
-      }
-     
-      .text-shadow-strong {
-        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
-      }
-      
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pura Vida Salvaje</title>
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/seccion2.css" />
+  <link rel="stylesheet" href="css/seccion3.css" />
+  <link rel="stylesheet" href="css/seccion4.css" />
+  <link rel="stylesheet" href="css/seccion5.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="./css/output.css">
+
+  <style>
+    .text-shadow {
+      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .text-shadow-strong {
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    }
+  </style>
 </head>
 
 <body class="text-white">
 
-<!-- NAV -->
-<nav>
-  <ul>
-    <li><a href="index.html">INICIO</a></li>
-    <li><a href="index.html#propuestas">PROPUESTAS</a></li>
-    <li><a href="acercade.html">ACERCA DE</a></li>
-    <li><a href="contactanos.html">CONTACTANOS</a></li>
-  </ul>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <ul>
+      <li><a href="index.html">INICIO</a></li>
+      <li><a href="index.html#propuestas">PROPUESTAS</a></li>
+      <li><a href="acercade.html">ACERCA DE</a></li>
+      <li><a href="contactanos.html">CONTACTANOS</a></li>
+    </ul>
+  </nav>
 
-<!-- HEADER -->
-<header class="w-full flex justify-center">
-  <div
-    class="relative w-full overflow-hidden rounded-b-[50px]"
-    style="
+  <!-- HEADER -->
+  <header class="w-full flex justify-center">
+    <div class="relative w-full overflow-hidden rounded-b-[50px]" style="
       height:85vh;
       border-bottom-left-radius:50px;
       border-bottom-right-radius:50px;
       background-image: url('./img/atanas-malamov-xGhaXZtQb1s-unsplash.jpg');
       background-size: cover;
       background-position: center center;
-    "
-  
->
-    <!-- sombra  -->
-    <div style="
+    ">
+      <!-- sombra  -->
+      <div style="
         position:absolute;  
         inset:0;
         background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0) 60%);
         z-index:1;
         border-bottom-left-radius:50px;
       border-bottom-right-radius:50px;
-    "></div>    
+    "></div>
 
-    <!-- overlay claro -->
-    <div style="position:absolute; inset:0; background: rgba(0,0,0,0.10); z-index:2;"></div>
+      <!-- overlay claro -->
+      <div style="position:absolute; inset:0; background: rgba(0,0,0,0.10); z-index:2;"></div>
 
-    <!-- texto -->
-    <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; z-index:3; padding:1rem; color:white;">
-      <div>
-        <h1 class="text-shadow" style="font-family:'Anton'; margin:0; font-size:clamp(40px,7vw,90px);">
-          PURA VIDA SALVAJE
-        </h1>
+      <!-- texto -->
+      <div
+        style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; z-index:3; padding:1rem; color:white;">
+        <div>
+          <h1 class="text-shadow" style="font-family:'Anton'; margin:0; font-size:clamp(40px,7vw,90px);">
+            PURA VIDA SALVAJE
+          </h1>
 
-        <h2 class="text-shadow" style="font-family:'Century Gothic'; margin:.4rem 0 0; font-size:clamp(20px,2vw,22px);">
-          Wild Pura Vida
-        </h2>
+          <h2 class="text-shadow"
+            style="font-family:'Century Gothic'; margin:.4rem 0 0; font-size:clamp(20px,2vw,22px);">
+            Wild Pura Vida
+          </h2>
 
-        <p class="text-shadow" style="font-family:'Century Gothic'; margin:.6rem 0 0; font-size:clamp(18px,1.6vw,16px);">
-          Apoyo y conservación de animales en peligro de extinción
-        </p>
-      </div>
-    </div>
-
-    <!-- flecha -->
-    <a href="#seccion2" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); z-index:4; cursor:pointer;">
-      <img src="./img/arrow-down-sign-to-navigate.png" alt="Bajar" style="width:50px; height:50px; animation:bounce 2s infinite;">
-    </a>
-</div>
-</header>
-<div style="height: 50px;"></div>
-<!-- PRÓXIMA SECCIÓN -->
-<section id="seccion2">
-  <div class="seccion2-contenedor">
-
-    <!-- Contenedor horizontal en pantallas grandes -->
-    <div class="seccion2-row">
-
-      <!-- Columna izquierda: imágenes verticales -->
-      <div class="seccion2-imagenes">
-        <img src="./img/OsoPerezoso.jpg" alt="Animal 1">
-        <img src="./img/Tucanes.jpg" alt="Animal 2">
-        <img src="./img/Volcan.jpg" alt="Animal 3">
+          <p class="text-shadow"
+            style="font-family:'Century Gothic'; margin:.6rem 0 0; font-size:clamp(18px,1.6vw,16px);">
+            Apoyo y conservación de animales en peligro de extinción
+          </p>
+        </div>
       </div>
 
-      <!-- Columna derecha: texto -->
-      <div class="seccion2-texto">
-        <h2>
-          POR LOS <span>ANIMALES</span> Y EL ESPÍRITU SALVAJE DE <span>COSTA RICA</span>
-        </h2>
-        <p>
-          Costa Rica alberga una de las mayores biodiversidades del planeta. Desde los bosques tropicales hasta los arrecifes de coral, cada ecosistema es hogar de especies únicas que merecen ser protegidas. Este proyecto promueve la conservación de la fauna silvestre y la educación ambiental para mantener viva la esencia natural del país.
-        </p>
+      <!-- flecha -->
+      <a href="#seccion2"
+        style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); z-index:4; cursor:pointer;">
+        <img src="./img/arrow-down-sign-to-navigate.png" alt="Bajar"
+          style="width:50px; height:50px; animation:bounce 2s infinite;">
+      </a>
+    </div>
+  </header>
+  <div style="height: 50px;"></div>
+  <!-- PRÓXIMA SECCIÓN -->
+  <section id="seccion2">
+    <div class="seccion2-contenedor">
+
+      <!-- Contenedor horizontal en pantallas grandes -->
+      <div class="seccion2-row">
+
+        <!-- Columna izquierda: VIDEO -->
+        <div class="seccion2-video">
+          <video autoplay muted loop playsinline>
+            <source src="./multimedia/rescate.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+          </video>
+        </div>
+
+        <!-- Columna derecha: texto -->
+        <div class="seccion2-texto">
+          <h2>
+            POR LOS <span>ANIMALES</span> Y EL ESPÍRITU SALVAJE DE <span>COSTA RICA</span>
+          </h2>
+          <p>
+            Costa Rica alberga una de las mayores biodiversidades del planeta. Desde los bosques tropicales hasta los
+            arrecifes de coral, cada ecosistema es hogar de especies únicas que merecen ser protegidas. Este proyecto
+            promueve la conservación de la fauna silvestre y la educación ambiental para mantener viva la esencia
+            natural del país.
+          </p>
+        </div>
+
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="animales-en-peligro">
-  
-  <!-- Títulos -->
-  <h2>ANIMALES EN PELIGRO</h2>
-  <h3>Faunas en amenaza</h3>
+  <section id="animales-en-peligro">
 
-  <!-- Contenedor del carrusel -->
-  <div class="carrusel-container">
-    
-    <!-- Flechas laterales -->
-    <button class="carrusel-arrow prev">&#10094;</button>
-    <button class="carrusel-arrow next">&#10095;</button>
+    <!-- Títulos -->
+    <h2>ANIMALES EN PELIGRO</h2>
+    <h3>Faunas en amenaza</h3>
 
-    <!-- Contenedor de slides -->
-    <div class="carrusel-slides">
-      <!-- Slides generadas desde JS -->
+    <!-- Contenedor del carrusel -->
+    <div class="carrusel-container">
+
+      <!-- Flechas laterales -->
+      <button class="carrusel-arrow prev">&#10094;</button>
+      <button class="carrusel-arrow next">&#10095;</button>
+
+      <!-- Contenedor de slides -->
+      <div class="carrusel-slides">
+        <!-- Slides generadas desde JS -->
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="propuestas" class="sticky-section">
+  <section id="propuestas" class="sticky-section">
 
-  <!-- Contenedor interno que cambia mientras se hace scroll -->
-  <div class="sticky-content" id="stickyContent">
+    <!-- Contenedor interno que cambia mientras se hace scroll -->
+    <div class="sticky-content" id="stickyContent">
 
       <!-- Overlay oscuro -->
       <div class="overlay-dark"></div>
@@ -151,133 +156,133 @@
 
       <!-- Vista 2 -->
       <div class="view view-2">
-      <h2 class="titulo">PROPUESTAS</h2>
-      <div class="linea"></div>  
+        <h2 class="titulo">PROPUESTAS</h2>
+        <div class="linea"></div>
 
-    <div class="tarjetas">
-  <a href="actividades.html" class="card" style="text-decoration:none; color:inherit;">
-    <img src="/img/rescate.webp">
-    <h3>ACTIVIDADES VOLUNTARIAS</h3>
-    <p>“Únete a actividades reales de conservación y apoyo a la fauna silvestre.”</p>
-    
-    <a href="actividades.html" class="btn-inscribete">Inscríbete →</a>
+        <div class="tarjetas">
+          <a href="actividades.html" class="card" style="text-decoration:none; color:inherit;">
+            <img src="/img/rescate.webp">
+            <h3>ACTIVIDADES VOLUNTARIAS</h3>
+            <p>“Únete a actividades reales de conservación y apoyo a la fauna silvestre.”</p>
 
-  </a>
-</div>
+            <a href="actividades.html" class="btn-inscribete">Inscríbete →</a>
 
-  </div>
+          </a>
+        </div>
 
-
-</section>
-<br>
-  <br>
-  <br>
-  <br>
-<section class="seccion-proyectos" aria-label="Proyectos">
-  <h2 class="proyectos-titulo">INSTITUCIONES</h2>
-  <p class="proyectos-sub">
-    Algunos Instituciones Nacionales que Protegen Nuestra Fauna
-  </p>
-
-  <div class="proyectos-panel">
-    <!-- IZQUIERDA -->
-     <div class="col-der">
-      <div class="categorias">
-        <div class="categoria selected" data-id="1">Conservación</div>
-        <div class="categoria" data-id="2">Rehabilitación</div>
-        <div class="categoria" data-id="3">Educación</div>
       </div>
-    </div>
 
-    <!-- CENTRO -->
-    <div class="col-centro">
-      <div id="project-logo" class="logo-proyecto">
-        <svg id="logo-svg" width="100" height="100" viewBox="0 0 100 100">
-          <rect width="100" height="100" rx="12" fill="#ffffff"/>
-          <text x="50" y="57" text-anchor="middle"
-          font-family="Anton, Arial" font-size="36" fill="#465127">PJ</text>
-        </svg>
+
+  </section>
+  <br>
+  <br>
+  <br>
+  <br>
+  <section class="seccion-proyectos" aria-label="Proyectos">
+    <h2 class="proyectos-titulo">INSTITUCIONES</h2>
+    <p class="proyectos-sub">
+      Algunos Instituciones Nacionales que Protegen Nuestra Fauna
+    </p>
+
+    <div class="proyectos-panel">
+      <!-- IZQUIERDA -->
+      <div class="col-der">
+        <div class="categorias">
+          <div class="categoria selected" data-id="1">Conservación</div>
+          <div class="categoria" data-id="2">Rehabilitación</div>
+          <div class="categoria" data-id="3">Educación</div>
+        </div>
       </div>
+
+      <!-- CENTRO -->
+      <div class="col-centro">
+        <div id="project-logo" class="logo-proyecto">
+          <svg id="logo-svg" width="100" height="100" viewBox="0 0 100 100">
+            <rect width="100" height="100" rx="12" fill="#ffffff" />
+            <text x="50" y="57" text-anchor="middle" font-family="Anton, Arial" font-size="36" fill="#465127">PJ</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- DERECHA -->
+      <div class="col-izq">
+        <p class="small-label"> </p>
+        <h3 id="project-title" class="proyecto-nombre">Proyecto Ejemplo</h3>
+        <p id="project-desc" class="proyecto-descripcion">
+          Descripción breve del proyecto seleccionado.
+        </p>
+      </div>
+
     </div>
+    <br><br><br><br><br><br><br>
+  </section>
 
-    <!-- DERECHA -->
-     <div class="col-izq">
-      <p class="small-label"> </p>
-      <h3 id="project-title" class="proyecto-nombre">Proyecto Ejemplo</h3>
-      <p id="project-desc" class="proyecto-descripcion">
-        Descripción breve del proyecto seleccionado.
-      </p>
+  <footer class="footer">
+    <div class="footer-contenedor">
+
+      <!-- IZQUIERDA: DATOS -->
+      <div class="footer-datos">
+        <h4 class="footer-titulo">Contacto</h4>
+        <p>Tel: +506 8888-8888</p>
+        <p>Correo: info@proyectosfauna.cr</p>
+        <p>San José, Costa Rica</p>
+      </div>
+
+      <!-- DERECHA: LOGO -->
+      <div class="footer-logo">
+        <img src="img/Logo.png" alt="Logo" />
+      </div>
+
     </div>
-   
-  </div>
-  <br><br><br><br><br><br><br>
-</section>
-
-<footer class="footer">
-  <div class="footer-contenedor">
-
-    <!-- IZQUIERDA: DATOS -->
-    <div class="footer-datos">
-      <h4 class="footer-titulo">Contacto</h4>
-      <p>Tel: +506 8888-8888</p>
-      <p>Correo: info@proyectosfauna.cr</p>
-      <p>San José, Costa Rica</p>
-    </div>
-
-    <!-- DERECHA: LOGO -->
-    <div class="footer-logo">
-      <img src="img/Logo.png" alt="Logo" />
-    </div>
-
-  </div>
-</footer>
+  </footer>
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
-<script src="js/animaciones.js"></script>
-<script src="js/carrusel.js"></script>
-<script src="js/propuestas.js"></script>
-<script src="js/proyectos.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
+  <script src="js/animaciones.js"></script>
+  <script src="js/carrusel.js"></script>
+  <script src="js/propuestas.js"></script>
+  <script src="js/proyectos.js"></script>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  // ¿La URL tiene #propuestas?
-  if (window.location.hash !== "#propuestas") return;
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // ¿La URL tiene #propuestas?
+      if (window.location.hash !== "#propuestas") return;
 
-  // ¿Desde dónde venimos?
-  let vieneDeMismaPagina = false;
+      // ¿Desde dónde venimos?
+      let vieneDeMismaPagina = false;
 
-  if (document.referrer) {
-    try {
-      const ref = new URL(document.referrer);
-      // mismo path => venía de la misma página (ej: recarga)
-      vieneDeMismaPagina = (ref.pathname === window.location.pathname);
-    } catch (e) {
-      // si algo falla, asumimos que NO viene de otra página
-      vieneDeMismaPagina = true;
-    }
-  }
+      if (document.referrer) {
+        try {
+          const ref = new URL(document.referrer);
+          // mismo path => venía de la misma página (ej: recarga)
+          vieneDeMismaPagina = (ref.pathname === window.location.pathname);
+        } catch (e) {
+          // si algo falla, asumimos que NO viene de otra página
+          vieneDeMismaPagina = true;
+        }
+      }
 
-  // Si venimos de la misma página (recarga / scroll interno) NO hacemos nada
-  if (vieneDeMismaPagina) return;
+      // Si venimos de la misma página (recarga / scroll interno) NO hacemos nada
+      if (vieneDeMismaPagina) return;
 
-  // Si venimos de otra página (acercade.html, contactanos.html, etc.),
-  // corregimos el scroll después de que cargue todo
-  setTimeout(() => {
-    const target = document.querySelector("#propuestas");
-    if (!target) return;
+      // Si venimos de otra página (acercade.html, contactanos.html, etc.),
+      // corregimos el scroll después de que cargue todo
+      setTimeout(() => {
+        const target = document.querySelector("#propuestas");
+        if (!target) return;
 
-    const offset = target.getBoundingClientRect().top + window.scrollY - 50;
+        const offset = target.getBoundingClientRect().top + window.scrollY - 50;
 
-    window.scrollTo({
-      top: offset,
-      behavior: "smooth"
+        window.scrollTo({
+          top: offset,
+          behavior: "smooth"
+        });
+      }, 600); // puedes ajustar 500–800 ms si hace falta
     });
-  }, 600); // puedes ajustar 500–800 ms si hace falta
-});
-</script>
+  </script>
 
 </body>
+
 </html>
