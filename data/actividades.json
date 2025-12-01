@@ -1,0 +1,62 @@
+{
+    "San José": [
+        {
+            "dropdown": "Apoyo en la preparación de alimentos y limpieza de recintos",
+            "titulo": "Apoyo en la preparación de alimentos y limpieza de recintos",
+            "descripcion": "El voluntario ayuda a preparar dietas, entregar alimentos a aves, mamíferos y reptiles, y asegurar la higiene de los recintos. Requisitos: ser mayor de 18 años, disposición para trabajo físico y respeto por el manejo profesional de fauna.",
+            "imagen": "./img/recinto.jpg"
+        },
+        {
+            "dropdown": "Creación de actividades y estímulos para animales en recuperación",
+            "titulo": "Creación de actividades y estímulos para animales en recuperación",
+            "descripcion": "Incluye fabricar juguetes seguros, esconder alimentos, estimular habilidades naturales y observar comportamientos. Requiere creatividad, trabajo manual y seguir instrucciones estrictas de bienestar animal.",
+            "imagen": "./img/recuperacion.jpg"
+        },
+        {
+            "dropdown": "Tareas generales en el centro de rescate",
+            "titulo": "Tareas generales en el centro de rescate",
+            "descripcion": "El voluntario colabora con traslados internos, control de utensilios, apoyo al personal y mantenimiento básico de áreas del recinto. No se permite contacto directo con animales en proceso crítico.",
+            "imagen": "./img/tareas.jpg"
+        }
+    ],
+    "Alajuela": [
+        {
+            "dropdown": "Actividades educativas sobre fauna silvestre",
+            "titulo": "Actividades educativas sobre fauna silvestre",
+            "descripcion": "Se participa en charlas, stands y actividades en comunidades aledañas para enseñar la importancia del respeto a los animales, evitando el tráfico y la tenencia ilegal. Requisitos: comunicación básica y buena presentación.",
+            "imagen": "./img/eduSilvestre.jpg"
+        },
+        {
+            "dropdown": "Trabajo manual en recintos de recuperación",
+            "titulo": "Trabajo manual en recintos de recuperación",
+            "descripcion": "Se apoyan reparaciones, mallas, plataformas y enriquecimientos para especies en proceso de liberación. Ideal para personas con habilidades prácticas o interés en trabajo físico.",
+            "imagen": "./img/recinto2.webp"
+        },
+        {
+            "dropdown": "Apoyo en tours y charlas ambientales",
+            "titulo": "Apoyo en tours y charlas ambientales",
+            "descripcion": "El voluntario puede participar en el recibimiento de grupos, apoyo en recorridos y explicación básica de la importancia de la conservación. Requisitos: actitud amable, responsabilidad y gusto por la comunicación.",
+            "imagen": "./img/charla.webp"
+        }
+    ],
+    "Guanacaste": [
+        {
+            "dropdown": "Siembra de árboles nativos en zonas degradadas",
+            "titulo": "Siembra de árboles nativos en zonas degradadas",
+            "descripcion": "Colaboración en la siembra, transporte de árboles, cuidado inicial y monitoreo de crecimiento. No requiere experiencia; sí buena condición física y disposición para trabajo en campo.",
+            "imagen": "./img/reforestacion.jpg"
+        },
+        {
+            "dropdown": "Caminatas para registrar presencia de especies",
+            "titulo": "Caminatas para registrar presencia de especies",
+            "descripcion": "Se realizan rutas de observación en bosques cercanos para recolectar datos de animales como monos, aves y perezosos. Requiere caminar en terreno irregular y seguir protocolos de seguridad.",
+            "imagen": "./img/caminata.jpg"
+        },
+        {
+            "dropdown": "Charlas y dinámicas para escuelas",
+            "titulo": "Charlas y dinámicas para escuelas",
+            "descripcion": "Apoyo al personal en actividades educativas con niños: charlas, talleres y juegos ambientales que promueven respeto por la fauna. Requisitos: paciencia, energía y buena comunicación.",
+            "imagen": "./img/charla2.jpeg"
+        }
+    ]
+}

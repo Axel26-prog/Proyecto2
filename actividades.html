@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +9,24 @@
     <!-- Tailwind -->
     <link rel="stylesheet" href="./css/output.css">
 
+    <link rel="stylesheet" href="./css/actividades.css">
+
 </head>
 
 <body class="min-h-screen" style="background-color:#465127;">
 
     <!-- TÍTULO -->
-    <h1 class="text-center text-white text-5xl mt-10"
-        style="font-family: 'Anton'; letter-spacing: 2px;">
+    <h1 class="text-center text-white text-7xl mt-10" style="font-family: 'Anton'; letter-spacing: 2px;">
         ACTIVIDADES VOLUNTARIAS
     </h1>
+    <br>
+    <a href="index.html#propuestas" class="btn-volver">← Volver</a>
 
     <!-- CONTENEDOR -->
-    <div class="mx-auto mt-12 p-8 rounded-lg w-11/12 md:w-1/2"
-        style="background-color:#8D9983;">
+    <div class="mx-auto mt-12 p-8 rounded-lg w-11/12 md:w-1/2" style="background-color:#8D9983;">
 
         <!-- PROVINCIA -->
-        <label class="block text-white mb-2"
-            style="font-family: 'Century Gothic';">
+        <label class="block text-white mb-2" style="font-family: 'Century Gothic';">
             Seleccione una provincia:
         </label>
 
@@ -33,44 +35,97 @@
         </select>
 
         <!-- ACTIVIDAD -->
-        <label class="block text-white mb-2"
-            style="font-family: 'Century Gothic';">
+        <label class="block text-white mb-2" style="font-family: 'Century Gothic';">
             Seleccione una actividad:
         </label>
 
-        <select class="w-full p-2 rounded mb-6">
+        <select id="selectActividad" class="w-full p-2 rounded mb-6">
             <option value="">Seleccione...</option>
         </select>
 
+
         <!-- ACTIVIDADES -->
-        <label class="block text-white"
-            style="font-family: 'Century Gothic';">
+        <label class="block text-white" style="font-family: 'Century Gothic';">
             Actividades:
         </label>
+
+        <div id="cardActividad" class="card-actividad">
+
+            <!-- Imagen -->
+            <div class="card-imagen">
+                <img id="imgActividad" src="" alt="Actividad" class="img-actividad">
+            </div>
+
+            <!-- Texto -->
+            <div class="flex-1">
+                <h2 id="tituloActividad" class="titulo-actividad">
+                    Descripción en el Dropdown
+                </h2>
+
+                <p id="descripcionActividad" class="descripcion-actividad">
+                    Descripción larga...
+                </p>
+            </div>
+
+            <!-- Botón -->
+            <button id= "btnInscribirse" class="btn-inscribirse">
+                Inscribirse
+            </button>
+
+        </div>
 
     </div>
 
 </body>
-<script>
-document.addEventListener("DOMContentLoaded", async () => {
-    const selectProvincia = document.getElementById("selectProvincia");
 
-    try {
-        // Cargar JSON
-        const response = await fetch("data/provincias.json");
-        const provincias = await response.json();
 
-        // Llenar select
-        provincias.forEach(prov => {
-            const option = document.createElement("option");
-            option.value = prov;
-            option.textContent = prov;
-            selectProvincia.appendChild(option);
-        });
+<!-- MODAL 1: Formulario de inscripción -->
+<div id="modalInscripcion" class="modal-overlay">
+    <div class="modal-box">
+        <h3 class="modal-titulo">Completa tus datos</h3>
 
-    } catch (error) {
-        console.error("Error cargando provincias:", error);
-    }
-});
-</script>
+        <!-- Mensaje de error -->
+        <p id="errorFormulario" class="modal-error" style="display:none;">
+            ⚠️ Por favor complete nombre y correo válidos.
+        </p>
+
+        <label class="modal-label" for="nombreVol">Nombre completo:</label>
+        <input id="nombreVol" type="text" class="modal-input" placeholder="Escribe tu nombre">
+
+        <label class="modal-label" for="correoVol">Correo electrónico:</label>
+        <input id="correoVol" type="email" class="modal-input" placeholder="ejemplo@correo.com">
+
+        <div class="modal-botones" style="justify-content: space-between;">
+            <button id="btnCancelar" class="modal-btn-cancelar">Cancelar</button>
+            <button id="btnContinuar" class="modal-btn-principal">Continuar</button>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL 2: Confirmación -->
+<div id="modalConfirmacion" class="modal-overlay">
+    <div class="modal-box">
+        <h3 class="modal-titulo">¡Inscripción realizada!</h3>
+
+        <p class="modal-texto">
+            Te has inscrito en la actividad:
+            <br>
+            <strong id="actividadSeleccionadaTexto"></strong>
+        </p>
+        <p class="modal-texto">
+            Te estaremos contactando por correo con más información.
+        </p>
+
+        
+        <div class="modal-botones">
+            <button id="btnCerrarModal" class="modal-btn-principal">Cerrar</button>
+        </div>
+    </div>
+</div>
+
+<!--ANIMACION DE CONFETI-->>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script src="./js/actividades.js"></script>
+
 </html>
