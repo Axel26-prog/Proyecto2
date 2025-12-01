@@ -175,7 +175,7 @@
   position: relative; /* sticky solo en desktop */
   width: 100%;
   min-height: 120vh;
-  background-image: url("/img/Bosque.jpg"); /* ajusta a ../img/Bosque.jpg si hace falta */
+  background-image: url("./img/Bosque.jpg"); /* ajusta a ../img/Bosque.jpg si hace falta */
   background-size: cover;
   background-position: center;
   display: flex;

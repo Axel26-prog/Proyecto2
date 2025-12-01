@@ -4,13 +4,13 @@
     "descripcion": "Estudiante de Ingeniería de Software en la UTN, interesada en el desarrollo de software y el diseño web. ",
     "cedula": "119100455",
     "correo": "stella.huang0702@gmail.com",
-    "foto": "/img/fotoErin.jpg"
+    "foto": "./img/fotoErin.jpg"
   },
   "axel": {
     "nombre": "Axel Orozco Guzman",
     "descripcion": "Soy estudiante de Ingenieria del Software en la UTN, me gusta el backend pero tambien me ha empezado a interesar el frontend, me considero una persona responsable y con muchas ganas de aprender.",
     "cedula": "208580807",
     "correo": "axelguzman996@gmail.com",
-    "foto": "/img/fotoaxel.jpg"
+    "foto": "./img/fotoaxel.jpg"
   }
 }

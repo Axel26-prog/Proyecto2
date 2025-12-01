@@ -6,7 +6,7 @@
   },
   {
     "nombre": "Mono Ardilla",
-    "imagen": "/img/MonoTiti.jpg",
+    "imagen": "./img/MonoTiti.jpg",
     "descripcion": "Los monos ardilla saltan entre las ramas del bosque lluvioso del Pacífico, conectando árboles y esparciendo semillas de frutas. Conoce cómo su presencia mantiene vivo y saludable el ecosistema del bosque."
   },
   {
