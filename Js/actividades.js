@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 origin: { y: 0.6 }
             });
 
-            // ELEVAR EL CANVAS DEL CONFETI POR ENCIMA DEL MODAL 🎉
+            // ELEVAR EL CANVAS DEL CONFETI POR ENCIMA DEL MODAL
             const canvas = document.querySelector("canvas");
             if (canvas) {
                 canvas.style.zIndex = "2000";   // encima del modal

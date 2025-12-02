@@ -1,151 +1,4 @@
- /* @font-face {
-  font-family: "Anton";
-  src: url("../Fuentes/Anton/Anton-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 
- @font-face {
-  font-family: "Century Gothic";
-  src: url("../Fuentes/century-gothic-similar-fonts/dominik/Dominik.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-
-
-.sticky-section {
-  position: relative;
-  height: 200vh; 
-}
-
-.sticky-content {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  background-image: url('/img/Bosque.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.overlay-dark {
-  position: absolute;
-  inset: 0;
-  background: black;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.6s ease;
-}
-
-
-.view {
-
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  opacity: 0;
- 
-  will-change: transform, opacity;
-}
-.view-1 {
-  opacity: 1;
-  transform: translateY(0); 
-}
-
-.view-2 {
-  opacity: 0;
-  transform: translateY(80px); 
-}
-
-
-
-.titulo {
-  font-family: 'Anton', sans-serif;
-  font-size: 6rem;
-  font-weight: 800;
-}
-
-.linea {
-  width: 80px;
-  height: 4px;
-  background: white;
-  margin: 15px 0;
-}
-
-.sub {
-  font-size: 1.2rem;
-  opacity: 0.8;
-}
-
-.tarjetas {
-  display: flex;
-  gap: 4rem;
-  margin-top: 2rem;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.card h3 {
-  font-family: 'Anton', sans-serif;
-  color: white;
-  margin-top: 1rem;
-  font-size: 1.5rem;
-}
-
-.card p {
-  font-family: 'Century Gothic', sans-serif;
-  font-size: 1rem;
-  color: white;
-  max-width: 200px;
-}
-
-.card img {
-  width: 280px;        
-  height: 180px;       
-  border-radius: 15px; 
-  object-fit: cover;   
-}
-
-.sticky-section {
-  position: relative;
-  height: 240vh; 
-}
-
-
-.btn-inscribete {
-  margin-top: 20px;
-  padding: 12px 28px;
-  background-color: white;
-  color: #465127;
-  font-family: "Century Gothic", sans-serif;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  display: inline-block; 
-  width: auto;
-  height: 50px;           
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn-inscribete:hover {
-  transform: scale(1.08);
-  box-shadow: 0 6px 18px rgba(255,255,255,0.25);
-} */
 
 @font-face {
   font-family: "Anton";
@@ -175,7 +28,7 @@
   position: relative; /* sticky solo en desktop */
   width: 100%;
   min-height: 120vh;
-  background-image: url("../img/Bosque.jpg"); /* ajusta a ../img/Bosque.jpg si hace falta */
+  background-image: url("../img/Bosque.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -373,7 +226,7 @@
   }
 }
 
-/* Móvil muy pequeño */
+
 @media (max-width: 480px) {
   .sticky-section {
     min-height: 100vh;
@@ -398,7 +251,7 @@
    ======================================= */
 @media (min-width: 900px) {
   .sticky-section {
-    height: 220vh; /* suficiente para que la animación tenga recorrido */
+    height: 220vh; 
   }
 
   .sticky-content {

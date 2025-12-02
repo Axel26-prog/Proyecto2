@@ -72,7 +72,7 @@ footer.footer {
   }
 
   .footer-logo img {
-    height: 160px; /* más pequeño en móvil */
+    height: 160px; 
     margin-top: 1rem;
   }
 

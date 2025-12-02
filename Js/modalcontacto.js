@@ -13,7 +13,7 @@ document.getElementById("btn-enviar").addEventListener("click", function (e) {
         captcha = grecaptcha.getResponse();
     }
 
-    // 🛑 Validaciones
+    //  Validaciones
     if (!nombre || !correo || !asunto || !descripcion) {
         alert("Por favor complete todos los campos.");
         return;
@@ -31,7 +31,7 @@ document.getElementById("btn-enviar").addEventListener("click", function (e) {
         return;
     }
 
-    // ✅ PASA VALIDACIÓN → Mostrar modal con datos
+    // PASA VALIDACIÓN → Mostrar modal con datos
     document.getElementById("m-nombre").textContent = nombre;
     document.getElementById("m-correo").textContent = correo;
     document.getElementById("m-asunto").textContent = asunto;

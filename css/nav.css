@@ -14,13 +14,12 @@
   nav {
     background: white;
     padding: 15px;
-
     position: fixed;     /* ← navbar siempre visible */
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999;       /* ← por encima de todo */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15); /* opcional */
+    z-index: 9999;       
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15); 
   }
 
   nav ul {
@@ -64,7 +63,7 @@ nav ul {
 }
 
 /* 
-   3) RESPONSIVO — MÓVILES
+   3) RESPONSIVO — 
 */
 @media (max-width: 768px) {
 

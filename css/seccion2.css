@@ -86,7 +86,7 @@
 
 /* Contenedor para el video */
 .seccion2-video {
-  background-color: #8D9983;   /* mismo verde del diseño */
+  background-color: #8D9983;   
   padding: 1rem;
   border-radius: 10px;
   flex: 2 1 300px;
@@ -126,17 +126,17 @@
 @media (max-width: 768px) {
 
   .seccion2-texto h2 {
-    font-size: 2rem;        /* antes 3.5rem */
+    font-size: 2rem;        
     line-height: 1.2;
   }
 
   .seccion2-texto p {
-    font-size: 1rem;        /* antes 2rem */
+    font-size: 1rem;        
     line-height: 1.5;
   }
 }
 
-/* MÓVIL MUY PEQUEÑO */
+
 @media (max-width: 480px) {
 
   .seccion2-texto h2 {

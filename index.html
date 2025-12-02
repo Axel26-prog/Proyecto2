@@ -267,7 +267,7 @@
       if (document.referrer) {
         try {
           const ref = new URL(document.referrer);
-          // mismo path => venía de la misma página (ej: recarga)
+         
           vieneDeMismaPagina = (ref.pathname === window.location.pathname);
         } catch (e) {
           // si algo falla, asumimos que NO viene de otra página
@@ -290,7 +290,7 @@
           top: offset,
           behavior: "smooth"
         });
-      }, 600); // puedes ajustar 500–800 ms si hace falta
+      }, 600); 
     });
   </script>
 

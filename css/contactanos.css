@@ -139,9 +139,7 @@
                       cursor: pointer;
                      }
 
-/* ==========================
-   TABLET / LAPTOP PEQUEÑA
-   ========================== */
+
 @media (max-width: 1100px) {
   .contacto-wrapper {
       gap: 1.5rem;
@@ -151,9 +149,7 @@
   }
 }
 
-/* ==========================
-   TABLET / MOBILE GRANDE
-   ========================== */
+
 @media (max-width: 900px) {
   .contacto-wrapper {
     flex-direction: column;
@@ -181,9 +177,7 @@
   }
 }
 
-/* ==========================
-   MOBILE NORMAL
-   ========================== */
+
 @media (max-width: 600px) {
   .label-nombre {
     font-size: 16px;
@@ -202,9 +196,7 @@
   }
 }
 
-/* ==========================
-   MÓVIL MUY PEQUEÑO
-   ========================== */
+
 @media (max-width: 480px) {
   .contacto-wrapper {
     margin-top: 15px;

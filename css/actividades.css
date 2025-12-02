@@ -10,12 +10,11 @@
     text-decoration: none;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s;
 
-    /* centrado por defecto (móvil) */
+    
     margin-left: auto;
     margin-right: auto;
 }
 
-/* En pantallas medianas hacia arriba lo alineamos a la izquierda si quieres */
 @media (min-width: 768px) {
     .btn-volver {
         margin-left: 4rem;

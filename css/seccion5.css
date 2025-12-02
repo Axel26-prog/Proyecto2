@@ -45,7 +45,7 @@
 .proyectos-titulo {
   font-family: "Anton", sans-serif;
   color: var(--verde-claro);
-  font-size: clamp(2.4rem, 6vw, 4.2rem); /* antes 5.2rem fijo */
+  font-size: clamp(2.4rem, 6vw, 4.2rem); 
   margin: 0;
   position: relative;
   display: inline-block;
@@ -74,14 +74,14 @@
 }
 
 /* ==========================
-   PANEL PRINCIPAL (mobile first)
+   PANEL PRINCIPAL
    ========================== */
 .proyectos-panel {
   margin-top: 1.8rem;
   background: #c7cdc3;
   border-radius: 12px;
   display: flex;
-  flex-direction: column; /* móvil: columnas apiladas */
+  flex-direction: column; 
   gap: 1.5rem;
   align-items: center;
   justify-content: center;
@@ -90,7 +90,7 @@
   overflow: visible;
 }
 
-/* COLUMNAS BASE (móvil) */
+
 .col-izq,
 .col-centro,
 .col-der {
@@ -100,7 +100,7 @@
   justify-content: center;
 }
 
-/* TEXTO DERECHA (en móvil queda abajo) */
+/* TEXTO DERECHA */
 .col-izq {
   flex-direction: column;
   gap: 0.6rem;
@@ -149,7 +149,7 @@
   border-radius: 12px;
 }
 
-/* CATEGORÍAS (botones) */
+/* CATEGORÍAS*/
 .col-der {
   justify-content: center;
 }
@@ -159,7 +159,7 @@
   flex-direction: column;
   gap: 0.9rem;
   width: 100%;
-  max-width: 260px; /* no se sale en móvil */
+  max-width: 260px; 
   align-items: stretch;
 }
 
@@ -206,7 +206,7 @@
 }
 
 /* ==========================
-   DESKTOP (layout en fila)
+   DESKTOP 
    ========================== */
 @media (min-width: 900px) {
   .proyectos-panel {
